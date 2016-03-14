@@ -7,13 +7,16 @@ if ($_SESSION['lama_id'] != '') {
 unset ($_SESSION['lama_id']);}
 else {};
 
-$login= "SELECT lama_id FROM `lama` WHERE family= '".$_POST['family']."' AND name = '".$_POST['name']."' AND code = '".$_POST['code']."'";
+$login= "SELECT id_motiv FROM `motiv` WHERE family= '".$_POST['family']."' AND name = '".$_POST['name']."'";
 $res = $link->query($login) ;
 $row = $res->fetch_assoc();
-$_SESSION['lama_id'] = $row['lama_id'];
+$_SESSION['id_motiv'] = $row['id_motiv'];
 
-if (isset($_SESSION['lama_id'])){
-    $income= "UPDATE `lama` SET `father_name` = '".$_POST['father_name']."',
+if (isset($_SESSION['id_motiv'])){
+    /*вводим информацию предоставленную пользователем, отчество...*/
+    $income= "UPDATE `motiv` SET `father_name` = '".$_POST['father_name']."' WHERE `lama_id`=".$_SESSION['lama_id'];
+
+    /*$income= "UPDATE `lama` SET `father_name` = '".$_POST['father_name']."',
                                      `pasp_n` = '".$_POST['pasp_n']."',
                                      `pasp_s` = '".$_POST['pasp_s']."',
                                     `factory` = '".$_POST['factory']."',
@@ -21,8 +24,9 @@ if (isset($_SESSION['lama_id'])){
                                       `place` = '".$_POST['place']."',
                                   `date_test` = '".date('y-m-d')."',
                                        `boss` = '".$_POST['boss']."'
-                                                                    WHERE `lama_id`=".$_SESSION['lama_id'];
+                                                                    WHERE `lama_id`=".$_SESSION['lama_id'];*/
     $res = $link->query($income) ;
+
     echo ('
         <div id="centr-w">
             <div id="centr">
