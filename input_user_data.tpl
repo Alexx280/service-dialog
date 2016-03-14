@@ -16,7 +16,7 @@
 
         <div id='centr-w'>
             <div id='inner'>
-                <p> Проверка знаний инструкций по информационной безопасности сотрудников ГК Лама </p>
+                <!--<p> Проверка знаний инструкций по информационной безопасности сотрудников ГК Лама </p> -->
             </div>
             <div id='centr' >
                     <form method="post" action="inter.php" >
@@ -26,6 +26,7 @@
                         <input type="text" id="na" name="name" size="30" required="required" ><br>
                         Отчество:<br>
                         <input type="text" id="fn" name="father_name" size="30" required="required" ><br>
+                        <!--
                         Паспорт<br>
                         Серия:  <input type="text" id="ps" name="pasp_s" size="4" required="required">
                         Номер:  <input type="text" id="pn" name="pasp_n" size="6" required="required"<br><br>
@@ -69,8 +70,10 @@
                             </select><br>
                         Код:<br>
                         <input type="text" name="code" id="co" size="30" required="required" placeholder="0000" title="Код получите у специалиста по безопасности"></br>
+                        -->
                         <br>
-                        <input type="submit" value="Начать тест" class="table-form" />
+                        <br>
+                        <input type="submit" value="Начать" class="table-form" />
 
                     </form>
                 <div>
