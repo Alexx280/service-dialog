@@ -10,22 +10,15 @@ include_once 'head_edu.tpl';
 
 <head>
     <link rel='stylesheet' type='text/css' href='animate.css'/>
-    <!-- Latest compiled and minified CSS
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-
-        <!-- Optional theme -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
-
-    <!-- Latest compiled and minified JavaScript -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="jquery.js"></script>
 
 </head>
 
-<div id="edu" class="tada">
-    <p class="animated flipInX te "> Информационная безопасность </p>
-    <p class="animated flipInX te "> в корпоративной компьютерной сети </p>
-    <p class="animated flipInX te "> ГК "ЛАМА" </p>
+<div id="edu" class="tada"><br><br>
+    <p class="animated flipInX te "> Сервисный диалог на кассе </p>
+    <p class="animated flipInX te "> в торговой розничной сети ГК Лама </p>
 
     <div class="butt1">
         <a href="test.php">
