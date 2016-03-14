@@ -8,8 +8,9 @@ $link=connect();
 /*внесение пользователя в базу*/
 
 if($_POST['parol-na']=='gigabite8srx') {
-    $login = "INSERT INTO `lama` (`family`, `name`,`code`)
-    VALUES ('" . $_POST['family'] . "','" . $_POST['name'] . "','" . rand(1000, 9999) . "')";
+    $login = "INSERT INTO `motiv` (`family`, `name`) VALUES ('" . $_POST['family'] . "','" . $_POST['name'] . "')";
+/*$login = "INSERT INTO `lama` (`family`, `name`,`code`)
+    VALUES ('" . $_POST['family'] . "','" . $_POST['name'] . "','" . rand(1000, 9999) . "')";*/
 
     if ($_POST['family'] != '') {
         $res = $link->query($login);
@@ -20,7 +21,7 @@ else {};
 
 /*проверка наличия сотрудника в базе*/
 if($_POST['parol']=='gigabite8srx') {
-    $input = "SELECT * FROM `lama` WHERE `family` = '" . $_POST['fam'] . "'";
+    $input = "SELECT * FROM `motiv` WHERE `family` = '" . $_POST['fam'] . "'";
 
 //if ($_POST['fam'] != '') {
     //  $res = $link->query($input) ;}
