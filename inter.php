@@ -6,17 +6,23 @@ $link=connect();
 if ($_SESSION['lama_id'] != '') {
 unset ($_SESSION['lama_id']);}
 else {};
-
+/*Активация сессии с указанными именем и фамилией*/
 $login= "SELECT id_motiv FROM `motiv` WHERE family= '".$_POST['family']."' AND name = '".$_POST['name']."'";
 $res = $link->query($login) ;
 $row = $res->fetch_assoc();
 $_SESSION['id_motiv'] = $row['id_motiv'];
-
+/*Конец Активация сессии с указанными именем и фамилией*/
+/*Если имя есть в базе*/
 if (isset($_SESSION['id_motiv'])){
     /*вводим информацию предоставленную пользователем, отчество...*/
-    $income= "UPDATE `motiv` SET `father_name` = '".$_POST['father_name']."' WHERE `lama_id`=".$_SESSION['lama_id'];
+    echo ("20".date('y-m-d'));
+    $income= "UPDATE motiv SET father_name = '". $_POST['father_name'] ."',
+                                     `job` = '".$_POST['job']."',
+                               `date_test` = '20".date('y-m-d')."',
+                               `first_day` = '".$_POST['first_day']."'
+                                                                        WHERE id_motiv = ".$_SESSION['id_motiv'];
 
-    /*$income= "UPDATE `lama` SET `father_name` = '".$_POST['father_name']."',
+       /*$income= "UPDATE `lama` SET `father_name` = '".$_POST['father_name']."',
                                      `pasp_n` = '".$_POST['pasp_n']."',
                                      `pasp_s` = '".$_POST['pasp_s']."',
                                     `factory` = '".$_POST['factory']."',
@@ -31,8 +37,7 @@ if (isset($_SESSION['id_motiv'])){
         <div id="centr-w">
             <div id="centr">
                 <p class="tc"> Добрый день, '.$_POST['name'].'  '.$_POST['father_name'].' .<br>
-                Для успешной сдачи зачёта необходимо ответить правильно <br> минимум на 7 из 10 вопросов.<br>
-                В каждом вопросе может быть несколько ответов.<br>
+                Предлагаем вам ответить на 18 вопросов.<br>
                 Вернуться на предыдущитй вопрос будет невозможно.<br>
                 На каждый вопроc выделено по 2 минуты<br>
                 <br><br></p>
@@ -46,6 +51,7 @@ if (isset($_SESSION['id_motiv'])){
         </div>
         ');
 }
+/*Если имени нет в базе*/
 else {echo('
         <div id="centr-w" >
             <div id="centr" >

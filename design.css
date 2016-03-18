@@ -542,6 +542,10 @@ text-decoration-color: #080808}*/
     z-index: 2;
     color: white;
 }
+/*минимизация больного текста*/
+.mini {
+    font-size: 0.65em;
+}
 /*
 .strings-edu {
     position: absolute;

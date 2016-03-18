@@ -50,10 +50,13 @@
                             <option value="Емельяненко ИП">"Емельяненко" ИП</option>
                             <option value="Централизованная Бухгалтерия ООО">"Централизованная  Бухгалтерия" </option>
                             <option value="УК Изумрудный город ООО">"УК "Изумрудный город" ООО</option>
-                        </select><br>
+                        </select><br>-->
 
                         Должность:<br>
                         <input type="text" name="job" id="jo" size="30" required="required" ><br>
+                        Дата устройства на работу:<br>
+                        <input type='date' name="first_day" id="jo" size="30" required="required" ><br>
+                        <!--
                         Руководитель:<br>
                         <input type="text" name="boss" id="bo" size="30" required="required" placeholder="Фамилия И.О."><br>
                         Место проведения тестирования:<br>

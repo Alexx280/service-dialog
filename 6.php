@@ -3,7 +3,7 @@ session_start();
 include_once 'head.tpl';
 include_once ("funk.php");
 $link=connect();
-
+/*
 if (isset ($_POST['otv2']) && isset ($_POST['otv5'])
     && !isset($_POST['otv1']) && !isset($_POST['otv3'])
     && !isset($_POST['otv4']))
@@ -13,7 +13,8 @@ if (isset ($_POST['otv2']) && isset ($_POST['otv5'])
 else
 {
     $q06="UPDATE `lama` SET `quest_06` = '0' WHERE `lama_id`=".$_SESSION['lama_id'];
-}
+}*/
+$q06="UPDATE `motiv` SET `quest05` = '".$_POST['text05']."' WHERE `id_motiv`=".$_SESSION['id_motiv'];
 
 $res = $link->query($q06);
 
@@ -23,8 +24,10 @@ $res = $link->query($q06);
     <div id='centr-q'>
     <div id="quest" >
 
-        <p class="tq">6. Коммерческая тайна.</p><br />
+        <p class="tq">6. Пакет</p><br />
         <form method="post" action="7.php">
+            Покупатель первым сказал, что у него есть свой пакет, нужно ли продавцу предлагать пакет покупателю?<br><br>
+            <!--
             Укажите верные утверждения:<br /><br />
             <input id="kt1" class="checkbox" type="checkbox" name="kt1" value="0" />
             <label for="kt1">К коммерческой тайне относится вся информация в организации</label><br>
@@ -36,7 +39,10 @@ $res = $link->query($q06);
             <label for="kt4">Я не буду работать с коммерческой тайной</label><br>
             <input id="kt5" class="checkbox" type="checkbox" name="kt5" value="1" />
             <label for="kt5">Нет правильного варианта</label><br>
-            <br><br><br><br><br><br><br><br>
+            -->
+            А. Да  <br>  В. Нет  <br>  С. Не знаю  <br>  D. Я требую выполнения
+            <br><br><br>
+            <p><textarea rows="7" cols="133" name="text06"></textarea></p><br><br>
             <div style="text-align: center;"> <input type="submit" value="Дальше" class="table-form"/></br></div>
 
         </form>

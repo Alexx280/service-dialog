@@ -4,7 +4,7 @@ include_once 'head.tpl';
 include_once ("funk.php");
 $link=connect();
 
-if (isset ($_POST['pc3']) && isset ($_POST['pc8'])
+/*if (isset ($_POST['pc3']) && isset ($_POST['pc8'])
  && !isset($_POST['pc1']) && !isset($_POST['pc2'])
  && !isset($_POST['pc6']) && !isset($_POST['pc4'])
  && !isset($_POST['pc5']) && !isset($_POST['pc7']))
@@ -15,7 +15,8 @@ else
 {
     $q04="UPDATE `lama` SET `quest_04` = '0' WHERE `lama_id`=".$_SESSION['lama_id'];
 }
-
+*/
+$q04="UPDATE `motiv` SET `quest03` = '".$_POST['text03']."' WHERE `id_motiv`=".$_SESSION['id_motiv'];
 $res = $link->query($q04);
 
 ?>
@@ -24,8 +25,9 @@ $res = $link->query($q04);
     <div id='centr-q'>
     <div id="quest" >
 
-        <p class="tq">4. Использование корпоративной сети и Интернет.</p> <br />
+        <p class="tq">4. Какой балл является максимальным за выполнение СД по новой системе оценки?</p> <br />
         <form method="post" action="5.php">
+            <!--
             Укажите верные утверждения:<br /><br />
 
             <input id="in1" class="checkbox" type="checkbox" name="inet1" value="0" />
@@ -45,7 +47,10 @@ $res = $link->query($q04);
             <br />
             <br />
             <br />
-            <br />
+            <br />-->
+            А. 5 баллов   <br>    В. 8 баллов   <br>    С. 10 баллов  <br>   D. Не знаю <br><br><br><br><br><br>
+            <p><textarea rows="1" cols="133" name="text04"></textarea></p>
+            <br><br><br><br><br><br>
             <div style="text-align: center;"><input type="submit" value="Дальше" class="table-form"/><br></div>
             </form>
 
