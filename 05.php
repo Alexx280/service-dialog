@@ -17,7 +17,7 @@ $res = $link->query($q);
 <div id="quest" >
 
     <p class="tq"> </p> <br />
-    <form method="post" action="06.php">
+    <form method="post" action="<?php echo "0".(substr(__FILE__,38,2)+1) ?>.php">
         Каким образом рассчитывается оценка по итогам проверки?<br>
         <br><br><br>
         <br><br><br>
@@ -42,7 +42,7 @@ $res = $link->query($q);
 
     </form>
 
-    <div class="strings"><p>5/18</p></div>
+    <div class="strings"><p><?php echo (substr(__FILE__,38,2)) ?>/18</p></div>
 </div>
 </div>
 <!--<a href="6.php">

@@ -17,7 +17,7 @@ $res = $link->query($q);
     <div id="quest" >
 
         <p class="tq"> </p><br />
-        <form method="post" action="09.php">
+        <form method="post" action="<?php echo "0".(substr(__FILE__,38,2)+1) ?>.php">
             Что означает ответ «Не точно» по какому- либо пункту Сервисного Диалога?<br><br>
             <!--
             Вы не успеваете выпольнить работу в срок, как вы поступите:<br><br>
@@ -40,7 +40,7 @@ $res = $link->query($q);
             <div style="text-align: center;"> <input type="submit" value="Дальше" class="table-form"/></br></div>
 
         </form>
-        <div class="strings"><p>8/18</p></div>
+        <div class="strings"><p><?php echo (substr(__FILE__,38,2)) ?>/18</p></div>
     </div>
 </div>
 <!--   <a href="end.php">

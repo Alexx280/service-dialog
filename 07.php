@@ -17,7 +17,7 @@ $res = $link->query($q);
     <div id="quest" >
 
         <p class="tq"></p><br />
-        <form method="post" action="08.php">
+        <form method="post" action="<?php echo "0".(substr(__FILE__,38,2)+1) ?>.php">
             Что является нарушением/невыполнением Сервисного Диалога (при каких условиях ставится ответ «Нет» по какому-либо пункту)?<br><br>
             А. Когда все слова внутри фразы сказаны, но порядок слов изменен <br>
             В. Когда изменена последовательность фраз в Сервисном диалоге <br>
@@ -46,7 +46,7 @@ $res = $link->query($q);
             <div style="text-align: center;"> <input type="submit" value="Дальше" class="table-form"/></br></div>
 
         </form>
-        <div class="strings"><p>7/18</p></div>
+        <div class="strings"><p><?php echo (substr(__FILE__,38,2)) ?>/18</p></div>
     </div>
 </div>
 <!--   <a href="end.php">

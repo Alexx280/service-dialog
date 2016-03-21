@@ -20,7 +20,7 @@ $res = $link->query($q);
     <div id="quest" >
 
         <p class="tq"></p><br />
-        <form method="post" action="10.php">
+        <form method="post" action="<?php echo (substr(__FILE__,38,2)+1) ?>.php">
             Что означает ответ " - " в анкете?<br><br>
             <!--
             Как верно следует зашифровать для отправки файл формата Word / Excel с конфиденциальной информацией?<br><br>
@@ -44,7 +44,7 @@ $res = $link->query($q);
             <div style="text-align: center;"> <input type="submit" value="Дальше" class="table-form"/></br></div>
 
         </form>
-        <div class="strings"><p>9/18</p></div>
+        <div class="strings"><p><?php echo (substr(__FILE__,38,2)) ?>/18</p></div>
     </div>
 </div>
 <!--   <a href="end.php">

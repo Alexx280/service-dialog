@@ -18,7 +18,7 @@ $res = $link->query($q);
 
         <p class="tq"> </p><br />
 
-            <form method="post" action="14.php" style="">
+            <form method="post" action="<?php echo (substr(__FILE__,38,2)+1) ?>.php" style="">
                 Если вам не понятна какая- либо информация в анкете программа, ваши действия?<br><br>
 
                 <br>
@@ -34,7 +34,7 @@ $res = $link->query($q);
 
             </form>
 
-        <div class="strings"><p>13/18</p></div>
+        <div class="strings"><p><?php echo (substr(__FILE__,38,2)) ?>/18</p></div>
     </div>
 </div>
 <!--   <a href="end.php">

@@ -19,51 +19,9 @@ $res = $link->query($q);
 
         <p class="tq"> </p><br />
 
-            <form method="post" action="11.php" style="">
+            <form method="post" action="<?php echo (substr(__FILE__,38,2)+1) ?>.php" style="">
                 Является ли нарушением, если кассир спросил про бонусную карту после того, как назвал сумму покупки?<br><br>
-                <!--
-                Укажите каким документом регламентируется ответственность за:<br><br>
-                Неправомерный доступ к компьютерной информации:
-                <select name="law1" style="width: 244px text-align: center">
-                    <option value="Нет">Выберите из списка</option>
-                    <option value="Да">Уголовной кодекс РФ</option>
-                    <option value="Нет">Гражданский кодекс РФ</option>
-                    <option value="Нет">Кодекс об административных правонарушениях РФ</option>
-                    <option value="Нет">Внутренние документы компании</option>
-                    <option value="Нет">Это не регламентируется</option>
-                    <option value="Нет">Нет верного варианта</option>
-                </select><br><br>
-                Разглашение информации с ограничнным доступом:
-                <select name="law2" style="width: 294px text-align: center">
-                    <option value="Нет">Выберите из списка</option>
-                    <option value="Нет">Уголовной кодекс РФ</option>
-                    <option value="Нет">Гражданский кодекс РФ</option>
-                    <option value="Да">Кодекс об административных правонарушениях РФ</option>
-                    <option value="Нет">Внутренние документы компании</option>
-                    <option value="Нет">Это не регламентируется</option>
-                    <option value="Нет">Нет верного варианта</option>
-                </select><br><br>
-                Неправомерный поиск информации по компьютерной сети:
-                <select name="law3" style="width: 244px text-align: center">
-                    <option value="Нет">Выберите из списка</option>
-                    <option value="Нет">Уголовной кодекс РФ</option>
-                    <option value="Нет">Гражданский кодекс РФ</option>
-                    <option value="Нет">Кодекс об административных правонарушениях РФ</option>
-                    <option value="Нет">Внутренние документы компании</option>
-                    <option value="Да">Это не регламентируется</option>
-                    <option value="Да">Нет верного варианта</option>
-                </select><br><br>
-                Распространение вирусных программ в компьютерной сети:
-                <select name="law4" style="width: 244px text-align: center">
-                    <option value="Нет">Выберите из списка</option>
-                    <option value="Да">Уголовной кодекс РФ</option>
-                    <option value="Нет">Гражданский кодекс РФ</option>
-                    <option value="Нет">Кодекс об административных правонарушениях РФ</option>
-                    <option value="Нет">Внутренние документы компании</option>
-                    <option value="Нет">Это не регламентируется</option>
-                    <option value="Нет">Нет верного варианта</option>
-                </select><br><br>
-                -->
+
                 А. Да  <br>   В. Нет   <br>    С. Не знаю   <br>   D. Не уверен(а), считаю, что влияет <br><br><br>
                 <p><textarea rows="7" cols="133" name="text10"></textarea></p><br><br>
 
@@ -73,7 +31,7 @@ $res = $link->query($q);
 
             </form>
 
-        <div class="strings"><p>10/18</p></div>
+        <div class="strings"><p><?php echo (substr(__FILE__,38,2)) ?>/18</p></div>
     </div>
 </div>
 <!--   <a href="end.php">

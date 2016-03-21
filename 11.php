@@ -18,7 +18,7 @@ $res = $link->query($q);
 
         <p class="tq"> </p><br />
 
-            <form method="post" action="12.php" style="">
+            <form method="post" action="<?php echo (substr(__FILE__,38,2)+1) ?>.php" style="">
                 Влияет ли на оценку кассира примечание Тайного Покупателя о том, что кассир, например, не поздоровалась с предыдущим или со следующим покупателем?<br><br>
 
                 А. Да  <br>     В. Нет  <br>     С. Не знаю  <br>    D. Не уверен(а), считаю, что влияет <br><br><br>
@@ -30,7 +30,7 @@ $res = $link->query($q);
 
             </form>
 
-        <div class="strings"><p>11/18</p></div>
+        <div class="strings"><p><?php echo (substr(__FILE__,38,2)) ?>/18</p></div>
     </div>
 </div>
 <!--   <a href="end.php">
