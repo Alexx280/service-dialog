@@ -2,20 +2,16 @@
 session_start();
 include_once 'head.tpl';
 include_once ("funk.php");
-$link=connect();
+if (substr(__FILE__,38,2)+0<10)
+{$chislo = "0".strval(substr(__FILE__,38,2)+0-1);}
 
-/*if (isset ($_POST['work3']) && !isset($_POST['work1'])
-    && !isset($_POST['work2']) && !isset($_POST['work5']))
-{
-    $q09="UPDATE `lama` SET `quest_09` = '1' WHERE `lama_id`=".$_SESSION['lama_id'];
-}
 else
-{
-    $q09="UPDATE `lama` SET `quest_09` = '0' WHERE `lama_id`=".$_SESSION['lama_id'];
-}
-*/
-$q09="UPDATE `motiv` SET `quest08` = '".$_POST['text08']."' WHERE `id_motiv`=".$_SESSION['id_motiv'];
-$res = $link->query($q09);
+{$chislo = strval(substr(__FILE__,38,2)+0-1);}
+$link=connect();
+$q = "UPDATE `motiv` SET `quest" .$chislo. "` = '" . $_POST['text' . $chislo ] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
+$res = $link->query($q);
+
+
 ?>
 
 <!DOCTYPE HTML>
@@ -23,7 +19,7 @@ $res = $link->query($q09);
 <div id='centr-q'>
     <div id="quest" >
 
-        <p class="tq">9.</p><br />
+        <p class="tq"></p><br />
         <form method="post" action="10.php">
             Что означает ответ " - " в анкете?<br><br>
             <!--
@@ -48,7 +44,7 @@ $res = $link->query($q09);
             <div style="text-align: center;"> <input type="submit" value="Дальше" class="table-form"/></br></div>
 
         </form>
-        <div class="strings"><p>9/10</p></div>
+        <div class="strings"><p>9/18</p></div>
     </div>
 </div>
 <!--   <a href="end.php">

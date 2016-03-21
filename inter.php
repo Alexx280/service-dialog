@@ -41,7 +41,7 @@ if (isset($_SESSION['id_motiv'])){
                 Вернуться на предыдущитй вопрос будет невозможно.<br>
                 На каждый вопроc выделено по 2 минуты<br>
                 <br><br></p>
-                <form method="post" action="1.php">
+                <form method="post" action="01.php">
                     <input type="submit" value="Вперёд" class="table-form"/>
                 </form><br>
                 <form method="post" action="curs_edu19.php"></p>

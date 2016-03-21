@@ -2,22 +2,14 @@
 session_start();
 include_once 'head.tpl';
 include_once ("funk.php");
-$link=connect();
 
-/*if (isset ($_POST['pc3']) && isset ($_POST['pc8'])
- && !isset($_POST['pc1']) && !isset($_POST['pc2'])
- && !isset($_POST['pc6']) && !isset($_POST['pc4'])
- && !isset($_POST['pc5']) && !isset($_POST['pc7']))
-{
-    $q04="UPDATE `lama` SET `quest_04` = '1' WHERE `lama_id`=".$_SESSION['lama_id'];
-}
+if (substr(__FILE__,38,2)+0<10)
+{$chislo = "0".strval(substr(__FILE__,38,2)+0-1);}
 else
-{
-    $q04="UPDATE `lama` SET `quest_04` = '0' WHERE `lama_id`=".$_SESSION['lama_id'];
-}
-*/
-$q04="UPDATE `motiv` SET `quest03` = '".$_POST['text03']."' WHERE `id_motiv`=".$_SESSION['id_motiv'];
-$res = $link->query($q04);
+{$chislo = strval(substr(__FILE__,38,2)+0-1);}
+$link=connect();
+$q = "UPDATE `motiv` SET `quest" .$chislo. "` = '" . $_POST['text' . $chislo ] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
+$res = $link->query($q);
 
 ?>
     <!DOCTYPE HTML>
@@ -25,8 +17,9 @@ $res = $link->query($q04);
     <div id='centr-q'>
     <div id="quest" >
 
-        <p class="tq">4. Какой балл является максимальным за выполнение СД по новой системе оценки?</p> <br />
-        <form method="post" action="5.php">
+        <p class="tq"></p> <br />
+        <form method="post" action="05.php">
+            Какой балл является максимальным за выполнение СД по новой системе оценки?
             <!--
             Укажите верные утверждения:<br /><br />
 
@@ -46,15 +39,15 @@ $res = $link->query($q04);
             <label for="in7">Могу хранить рабочую информацию только в папке отдела на сервере организации либо на <br>своём рабочем компьютере</label> <br>
             <br />
             <br />
-            <br />
             <br />-->
-            А. 5 баллов   <br>    В. 8 баллов   <br>    С. 10 баллов  <br>   D. Не знаю <br><br><br><br><br><br>
-            <p><textarea rows="1" cols="133" name="text04"></textarea></p>
-            <br><br><br><br><br><br>
+            <br />
+            А. 5 баллов   <br>    В. 8 баллов   <br>    С. 10 баллов  <br>   D. Не знаю <br><br><br><br><br>
+            <p><textarea rows="7" cols="133" name="text04"></textarea></p><br><br>
+
             <div style="text-align: center;"><input type="submit" value="Дальше" class="table-form"/><br></div>
             </form>
 
-        <div class="strings"><p>4/10</p></div>
+        <div class="strings"><p>4/18</p></div>
     </div>
     </div>
   <!--  <a href="5.php">

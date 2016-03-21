@@ -2,20 +2,13 @@
 session_start();
 include_once 'head.tpl';
 include_once ("funk.php");
-$link=connect();
-/*
-if (isset ($_POST['file3']) && !isset($_POST['file1'])
-    && !isset($_POST['file2'])&& !isset($_POST['file4']) && !isset($_POST['file5']) && !isset($_POST['file6']))
-{
-    $q08="UPDATE `lama` SET `quest_08` = '1' WHERE `lama_id`=".$_SESSION['lama_id'];
-}
+if (substr(__FILE__,38,2)+0<10)
+{$chislo = "0".strval(substr(__FILE__,38,2)+0-1);}
 else
-{
-    $q08="UPDATE `lama` SET `quest_08` = '0' WHERE `lama_id`=".$_SESSION['lama_id'];
-}
-*/
-$q08="UPDATE `motiv` SET `quest07` = '".$_POST['text07']."' WHERE `id_motiv`=".$_SESSION['id_motiv'];
-$res = $link->query($q08);
+{$chislo = strval(substr(__FILE__,38,2)+0-1);}
+$link=connect();
+$q = "UPDATE `motiv` SET `quest" .$chislo. "` = '" . $_POST['text' . $chislo ] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
+$res = $link->query($q);
 ?>
 
 <!DOCTYPE HTML>
@@ -23,8 +16,8 @@ $res = $link->query($q08);
 <div id='centr-q'>
     <div id="quest" >
 
-        <p class="tq">8. </p><br />
-        <form method="post" action="9.php">
+        <p class="tq"> </p><br />
+        <form method="post" action="09.php">
             Что означает ответ «Не точно» по какому- либо пункту Сервисного Диалога?<br><br>
             <!--
             Вы не успеваете выпольнить работу в срок, как вы поступите:<br><br>
@@ -47,7 +40,7 @@ $res = $link->query($q08);
             <div style="text-align: center;"> <input type="submit" value="Дальше" class="table-form"/></br></div>
 
         </form>
-        <div class="strings"><p>8/10</p></div>
+        <div class="strings"><p>8/18</p></div>
     </div>
 </div>
 <!--   <a href="end.php">

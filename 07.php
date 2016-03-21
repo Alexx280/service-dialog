@@ -2,20 +2,13 @@
 session_start();
 include_once 'head.tpl';
 include_once ("funk.php");
-$link=connect();
-
-/*if (isset ($_POST['kt3']) && !isset($_POST['kt1'])
-    && !isset($_POST['kt2'])&& !isset($_POST['kt4'])&& !isset($_POST['kt5']))
-{
-    $q07="UPDATE `lama` SET `quest_07` = '1' WHERE `lama_id`=".$_SESSION['lama_id'];
-}
+if (substr(__FILE__,38,2)+0<10)
+{$chislo = "0".strval(substr(__FILE__,38,2)+0-1);}
 else
-{
-    $q07="UPDATE `lama` SET `quest_07` = '0' WHERE `lama_id`=".$_SESSION['lama_id'];
-}
-*/
-$q07="UPDATE `motiv` SET `quest06` = '".$_POST['text06']."' WHERE `id_motiv`=".$_SESSION['id_motiv'];
-$res = $link->query($q07);
+{$chislo = strval(substr(__FILE__,38,2)+0-1);}
+$link=connect();
+$q = "UPDATE `motiv` SET `quest" .$chislo. "` = '" . $_POST['text' . $chislo ] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
+$res = $link->query($q);
 ?>
 
 <!DOCTYPE HTML>
@@ -23,8 +16,8 @@ $res = $link->query($q07);
 <div id='centr-q'>
     <div id="quest" >
 
-        <p class="tq">7. Нарушение СД.</p><br />
-        <form method="post" action="8.php">
+        <p class="tq"></p><br />
+        <form method="post" action="08.php">
             Что является нарушением/невыполнением Сервисного Диалога (при каких условиях ставится ответ «Нет» по какому-либо пункту)?<br><br>
             А. Когда все слова внутри фразы сказаны, но порядок слов изменен <br>
             В. Когда изменена последовательность фраз в Сервисном диалоге <br>
@@ -53,7 +46,7 @@ $res = $link->query($q07);
             <div style="text-align: center;"> <input type="submit" value="Дальше" class="table-form"/></br></div>
 
         </form>
-        <div class="strings"><p>7/10</p></div>
+        <div class="strings"><p>7/18</p></div>
     </div>
 </div>
 <!--   <a href="end.php">

@@ -157,7 +157,7 @@ $osh=substr(($ssd1.$ssd3.$ssd4.$ssd5.$ssd6.$ssd7.$ssd8.$ssd9.$ssd10.$ssd11),0 ,-
             $res = $link->query($code);
             echo ("<div id='centr-q'><div id='quest' style='height: 450px; '> <p class='tc'>".$row['name']." ".$row['father_name'].", вы не верно ответили на вопросы, <br/> можете попробовать ещё раз.  " .$d."</p><center><img src='pic/test_one.png'></center> Ваши ошибки в следующих разделах:<br>".
             $osh.". ". "<br><br>
-             <form  action='1.php'>
+             <form  action='01.php'>
             <center><input type='submit' value='Ещё раз' class='table-form'/></center>
             </form>
             <br/>

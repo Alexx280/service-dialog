@@ -2,30 +2,21 @@
 session_start();
 include_once 'head.tpl';
 include_once ("funk.php");
-$link=connect();
-/*
-if (isset ($_POST['otv2']) && isset ($_POST['otv5'])
-    && !isset($_POST['otv1']) && !isset($_POST['otv3'])
-    && !isset($_POST['otv4']))
-{
-    $q06="UPDATE `lama` SET `quest_06` = '1' WHERE `lama_id`=".$_SESSION['lama_id'];
-}
+if (substr(__FILE__,38,2)+0<10)
+{$chislo = "0".strval(substr(__FILE__,38,2)+0-1);}
 else
-{
-    $q06="UPDATE `lama` SET `quest_06` = '0' WHERE `lama_id`=".$_SESSION['lama_id'];
-}*/
-$q06="UPDATE `motiv` SET `quest05` = '".$_POST['text05']."' WHERE `id_motiv`=".$_SESSION['id_motiv'];
-
-$res = $link->query($q06);
-
+{$chislo = strval(substr(__FILE__,38,2)+0-1);}
+$link=connect();
+$q = "UPDATE `motiv` SET `quest" .$chislo. "` = '" . $_POST['text' . $chislo ] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
+$res = $link->query($q);
 ?>
     <!DOCTYPE HTML>
     <html>
     <div id='centr-q'>
     <div id="quest" >
 
-        <p class="tq">6. Пакет</p><br />
-        <form method="post" action="7.php">
+        <p class="tq"></p><br />
+        <form method="post" action="07.php">
             Покупатель первым сказал, что у него есть свой пакет, нужно ли продавцу предлагать пакет покупателю?<br><br>
             <!--
             Укажите верные утверждения:<br /><br />
@@ -46,7 +37,7 @@ $res = $link->query($q06);
             <div style="text-align: center;"> <input type="submit" value="Дальше" class="table-form"/></br></div>
 
         </form>
-        <div class="strings"><p>6/10</p></div>
+        <div class="strings"><p>6/18</p></div>
     </div>
     </div>
  <!--   <a href="end.php">

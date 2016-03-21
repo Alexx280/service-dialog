@@ -18,11 +18,15 @@ $res = $link->query($q);
 
         <p class="tq"> </p><br />
 
-            <form method="post" action="12.php" style="">
-                Влияет ли на оценку кассира примечание Тайного Покупателя о том, что кассир, например, не поздоровалась с предыдущим или со следующим покупателем?<br><br>
+            <form method="post" action="18.php" style="">
+                Какие сложности у вас возникают при работе с персоналом по итогам проверок ТП?<br><br>
 
-                А. Да  <br>     В. Нет  <br>     С. Не знаю  <br>    D. Не уверен(а), считаю, что влияет <br><br><br>
-                <p><textarea rows="7" cols="133" name="text11"></textarea></p><br><br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br><br><br>
+                <p><textarea rows="7" cols="133" name="text17"></textarea></p><br><br>
 
                 <div style="text-align: center;">
                     <input type="submit" value="Дальше" class="table-form"/><br>
@@ -30,7 +34,7 @@ $res = $link->query($q);
 
             </form>
 
-        <div class="strings"><p>11/18</p></div>
+        <div class="strings"><p>17/18</p></div>
     </div>
 </div>
 <!--   <a href="end.php">

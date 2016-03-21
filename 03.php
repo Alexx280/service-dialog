@@ -2,19 +2,15 @@
 session_start();
 include_once 'head.tpl';
 include_once ("funk.php");
-$link=connect();
 
-/*if ( !isset($_POST['email2']) && !isset($_POST['email1']) && !isset($_POST['email4']) && !isset($_POST['email3']) && isset($_POST['email6'] ))
-{
-    $q03="UPDATE `lama` SET `quest_03` = '1' WHERE `lama_id`=".$_SESSION['lama_id'];
-}
+if (substr(__FILE__,38,2)+0<10)
+{$chislo = "0".strval(substr(__FILE__,38,2)+0-1);}
 else
-{
-    $q03="UPDATE `lama` SET `quest_03` = '0' WHERE `lama_id`=".$_SESSION['lama_id'];
-}
-*/
-$q03="UPDATE `motiv` SET `quest02` = '".$_POST['text02']."' WHERE `id_motiv`=".$_SESSION['id_motiv'];
-$res = $link->query($q03);
+{$chislo = strval(substr(__FILE__,38,2)+0-1);}
+$link=connect();
+$q = "UPDATE `motiv` SET `quest" .$chislo. "` = '" . $_POST['text' . $chislo ] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
+$res = $link->query($q);
+
 ?>
 
 <!DOCTYPE HTML>
@@ -22,8 +18,8 @@ $res = $link->query($q03);
 <div id='centr-q'>
 <div id="quest" >
 
-    <p class="tq"> 3. Какие пункты Стандарта обслуживания влияют на оценку по итогам проверки?  </p><br />
-    <form method="post" action="4.php">
+    <p class="tq"> Какие пункты Стандарта обслуживания влияют на оценку по итогам проверки?  </p><br />
+    <form method="post" action="04.php">
         <!--
         Укажите верные утверждения:<br /><br />
         <input id="pc1" class="checkbox" type="checkbox" name="pc1" value="0" />
@@ -66,12 +62,12 @@ $res = $link->query($q03);
         17.	Отбейте чек для покупателя и для магазина, положите чек на место для подписания и скажите Покупателю: «Распишитесь, пожалуйста». Сверьте подпись на  карте и чеке. Распишитесь в чеке покупателя и положите чек вместе с картой  на монетницу, а второй чек с подписью Покупателя положите в кассу.<br>
         18.	В том случае, если для подтверждения операции необходимо ввести пин-код, то предоставьте терминал для ввода пин-кода и скажите покупателю «Введите пин-код, пожалуйста». После этого один чек вместе с картой  положите на монетницу, а второй чек положите в кассу.<br>
         19.	Посмотрите на  Покупателя, улыбнитесь  и поблагодарите его: «Спасибо за покупку, приходите к нам еще!»<br>
-        </p><br>
-        <p><textarea rows="1" cols="133" name="text03"></textarea></p>
+        </p>
+        <p><textarea rows="1" cols="133" name="text03"></textarea></p><br>
         <div style="text-align: center;"> <input type="submit" value="Дальше" class="table-form"/></br></div>
         </form>
 
-    <div class="strings"><p>3/10</p></div>
+    <div class="strings"><p>3/18</p></div>
 </div>
 </div>
 <!--<a href="4.php">

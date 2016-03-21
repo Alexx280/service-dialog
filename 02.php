@@ -1,44 +1,32 @@
 <?php
 session_start();
 include_once 'head.tpl';
-include_once ("funk.php");
+include_once "funk.php";
 
+if (substr(__FILE__,38,2)+0<10)
+{$chislo = "0".strval(substr(__FILE__,38,2)+0-1);}
+else
+{$chislo = strval(substr(__FILE__,38,2)+0-1);}
 $link=connect();
-/*
-if (isset ($_POST['space3']) && !isset($_POST['space2']) && !isset($_POST['space1']) && !isset($_POST['space4']) /*&& !isset($_POST['space5'])   )
-{
-    $q01="UPDATE `lama` SET `quest_01` = '1' WHERE `lama_id`=".$_SESSION['lama_id'];
-}
-else
-{*/
-    $q01="UPDATE `motiv` SET `quest01` = '".$_POST['text01']."' WHERE `id_motiv`=".$_SESSION['id_motiv'];
-/*}
-
-if (isset ($_POST['button2']) && !isset($_POST['button1']) && !isset($_POST['button3']) && !isset($_POST['button4']))
-{
-    $q02="UPDATE `lama` SET `quest_02` = '1' WHERE `lama_id`=".$_SESSION['lama_id'];;
-}
-else
-{
-    $q02="UPDATE `lama` SET `quest_02` = '0' WHERE `lama_id`=".$_SESSION['lama_id'];;
-}
-
-$q0="UPDATE `lama` SET `see` = '".$_POST['parol']."' WHERE `lama_id`=".$_SESSION['lama_id'];
-*/
-$res = $link->query($q01);
-/*
-$res = $link->query($q02);
-$res = $link->query($q0);
-*/
+$q = "UPDATE `motiv` SET `quest" .$chislo. "` = '" . $_POST['text' . $chislo ] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
+$res = $link->query($q);
 ?>
 
 <!DOCTYPE HTML>
 <html>
 <div id='centr-q'>
 <div id="quest" >
-    <p class="tq"> 2. Какова цель проверок Тайными покупателями? </p><br>
-    <form method="post" action="3.php">
-        <br><br>
+    <p class="tq"> </p><br>
+    <form method="post" action="  <?php echo "0".strval(substr(__FILE__,38,2)+1) ?>.php">
+        Какова цель проверок Тайными покупателями? <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <!--
         <input id="em1" class="checkbox" type="checkbox" name="email1" value="0" />
         <label for="em1">Пользоваться в личных целях вне рабочее время</label> <br>
@@ -52,13 +40,13 @@ $res = $link->query($q0);
                 <label for="em5">Рассылать объявления поздравительного характера в пределах отдела</label> <br>-->
         <!--<input id="em6" class="checkbox" type="checkbox" name="email6" value="1" />
         <label for="em6">Нет правильного варианта</label> <br>-->
-        <p><textarea rows="7" cols="133" name="text02"></textarea></p><br><br><br>
+        <p><textarea rows="7" cols="133" name="text02"></textarea></p><br><br>
 
-        <br><br><br><br><br><br>
+
         <div style="text-align: center;"><input type="submit" value="Дальше" class="table-form"/><br></div>
 
          </form>
-    <div class="strings"><p>2/10</p></div>
+    <div class="strings"><p>2/18</p></div>
 </div>
 </div>
 <!--<a href="3.php">

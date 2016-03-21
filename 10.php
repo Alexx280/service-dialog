@@ -2,20 +2,14 @@
 session_start();
 include_once 'head.tpl';
 include_once ("funk.php");
-$link=connect();
-/*
-if (isset ($_POST['s4']) && !isset($_POST['s1']) && !isset($_POST['s2']) && !isset($_POST['s3']) && !isset($_POST['s5'])
-)
-{
-    $q10="UPDATE `lama` SET `quest_12` = '1' WHERE `lama_id`=".$_SESSION['lama_id'];
-}
+
+if (substr(__FILE__,38,2)+0<=10)
+{$chislo = "0".strval(substr(__FILE__,38,2)+0-1); echo $chislo;}
 else
-{
-    $q10="UPDATE `lama` SET `quest_12` = '0' WHERE `lama_id`=".$_SESSION['lama_id'];
-}
-*/
-$q10="UPDATE `motiv` SET `quest09` = '".$_POST['text09']."' WHERE `id_motiv`=".$_SESSION['id_motiv'];
-$res = $link->query($q10);
+{$chislo = strval(substr(__FILE__,38,2)+0-1); echo $chislo;}
+$link=connect();
+$q = "UPDATE `motiv` SET `quest" .$chislo. "` = '" . $_POST['text' . $chislo ] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
+$res = $link->query($q);
 ?>
 
 <!DOCTYPE HTML>
@@ -23,9 +17,9 @@ $res = $link->query($q10);
 <div id='centr-q'>
     <div id="quest" >
 
-        <p class="tq">10. </p><br />
+        <p class="tq"> </p><br />
 
-            <form method="post" action="end.php" style="">
+            <form method="post" action="11.php" style="">
                 Является ли нарушением, если кассир спросил про бонусную карту после того, как назвал сумму покупки?<br><br>
                 <!--
                 Укажите каким документом регламентируется ответственность за:<br><br>
@@ -79,7 +73,7 @@ $res = $link->query($q10);
 
             </form>
 
-        <div class="strings"><p>10/10</p></div>
+        <div class="strings"><p>10/18</p></div>
     </div>
 </div>
 <!--   <a href="end.php">
