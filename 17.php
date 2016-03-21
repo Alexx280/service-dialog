@@ -18,7 +18,7 @@ $res = $link->query($q);
 
         <p class="tq"> </p><br />
 
-            <form method="post" action="<?php echo (substr(__FILE__,38,2)) ?>.php" style="">
+            <form method="post" action="<?php echo (substr(__FILE__,38,2)+1) ?>.php" style="">
                 Какие сложности у вас возникают при работе с персоналом по итогам проверок ТП?<br><br>
 
                 <br>
