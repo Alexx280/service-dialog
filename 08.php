@@ -1,23 +1,25 @@
 <?php
 session_start();
 include_once 'head.tpl';
-include_once ("funk.php");
-if (substr(__FILE__,38,2)+0<10)
-{$chislo = "0".strval(substr(__FILE__,38,2)+0-1);}
-else
-{$chislo = strval(substr(__FILE__,38,2)+0-1);}
-$link=connect();
-$q = "UPDATE `motiv` SET `quest" .$chislo. "` = '" . $_POST['text' . $chislo ] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
+include_once("funk.php");
+if (substr(__FILE__, 38, 2) + 0 < 10) {
+    $chislo = "0" . strval(substr(__FILE__, 38, 2) + 0 - 1);
+} else {
+    $chislo = strval(substr(__FILE__, 38, 2) + 0 - 1);
+}
+$link = connect();
+$q = "UPDATE `motiv` SET `quest" . $chislo . "` = '" . $_POST['text' . $chislo] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
 $res = $link->query($q);
 ?>
 
 <!DOCTYPE HTML>
 <html>
 <div id='centr-q'>
-    <div id="quest" >
+    <div id="quest">
 
-        <p class="tq"> </p><br />
-        <form method="post" action="<?php echo "0".(substr(__FILE__,38,2)+1) ?>.php">
+        <p class="tq"></p><br/>
+
+        <form method="post" action="<?php echo "0" . (substr(__FILE__, 38, 2) + 1) ?>.php">
             Что означает ответ «Не точно» по какому- либо пункту Сервисного Диалога?<br><br>
             <!--
             Вы не успеваете выпольнить работу в срок, как вы поступите:<br><br>
@@ -35,12 +37,13 @@ $res = $link->query($q);
             А. Серьезное отклонение от стандарта обслуживания <br>
             В. Любое несоответствие фразы стандарту обслуживания <br>
             С. Не знаю <br><br><br><br><br>
+
             <p><textarea rows="7" cols="133" name="text08"></textarea></p><br><br>
 
-            <div style="text-align: center;"> <input type="submit" value="Дальше" class="table-form"/></br></div>
+            <div style="text-align: center;"><input type="submit" value="Дальше" class="table-form"/></br></div>
 
         </form>
-        <div class="strings"><p><?php echo (substr(__FILE__,38,2)) ?>/18</p></div>
+        <div class="strings"><p><?php echo(substr(__FILE__, 38, 2)) ?>/18</p></div>
     </div>
 </div>
 <!--   <a href="end.php">

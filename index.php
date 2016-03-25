@@ -17,20 +17,25 @@ include_once 'head_edu.tpl';
 </head>
 
 <div id="edu" class="tada"><br><br>
+
     <p class="animated flipInX te "> Сервисный диалог на кассе </p>
+
     <p class="animated flipInX te "> в торговой розничной сети ГК Лама </p>
 
-    <div class="butt1">
+    <div class="butt4">
         <a href="test.php">
-            <button type="button" class="btn btn-success btn-lg btn3d" style="width: 135px"> <span class="glyphicon glyphicon-ok"></span>  Тест  </button>
+            <button type="button" class="btn btn-success btn-lg btn3d" style="width: 135px"><span
+                    class="glyphicon glyphicon-ok"></span> Тест
+            </button>
         </a>
     </div>
+    <!--
     <div class="butt2">
         <a href="curs_edu19.php">
             <button type="button" class="btn btn-success btn-lg btn3d">Инструкции</button>
         </a>
     </div>
-    <!--
+
     <div class="butt4">
         <a href="curs_edu19.php">
             <button type="button" class="btn btn-info btn-lg btn3d "><span class="glyphicon glyphicon-question-sign"></span> Info</button>
@@ -43,12 +48,20 @@ include_once 'head_edu.tpl';
 </div>
 
 <script>
-    $(document).ready(function(){
-        $('.butt1').hover (function(){$('img').animate({opacity:1},500)},function(){$('img').animate({opacity:0},1000)});
-        $('.butt1').hover (function(){$('#comment0').animate({opacity:1},500)},function(){$('#comment0').animate({opacity:0},1000)})
+    $(document).ready(function () {
+        $('.butt1').hover(function () {
+            $('img').animate({opacity: 1}, 500)
+        }, function () {
+            $('img').animate({opacity: 0}, 1000)
+        });
+        $('.butt1').hover(function () {
+            $('#comment0').animate({opacity: 1}, 500)
+        }, function () {
+            $('#comment0').animate({opacity: 0}, 1000)
+        })
     });
 
-    </script>
+</script>
 
 
 </html>

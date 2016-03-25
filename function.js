@@ -6,7 +6,7 @@
     var minutes = d.getMinutes();
     var seconds = d.getSeconds();
 
-    month=new Array("января", "февраля", "марта", "апреля", "мая", "июня",
+    month = new Array("января", "февраля", "марта", "апреля", "мая", "июня",
         "июля", "августа", "сентября", "октября", "ноября", "декабря");
 
     if (day <= 9) day = "0" + day;
@@ -15,7 +15,7 @@
     if (seconds <= 9) seconds = "0" + seconds;
 
     date_time = "Сегодня - " + day + " " + month[month_num] + " " + d.getFullYear() +
-    " г.&nbsp;&nbsp;&nbsp;Текущее время - "+ hours + ":" + minutes + ":" + seconds;
+    " г.&nbsp;&nbsp;&nbsp;Текущее время - " + hours + ":" + minutes + ":" + seconds;
     if (document.layers) {
         document.layers.doc_time.document.write(date_time);
         document.layers.doc_time.document.close();
@@ -29,8 +29,8 @@ function createMessage(title, body) {
     var container = document.createElement('div')
 
     container.innerHTML = '<div class="my-message"> \
-    <div class="my-message-title">'+title+'</div> \
-    <div class="my-message-body">'+body+'</div> \
+    <div class="my-message-title">' + title + '</div> \
+    <div class="my-message-body">' + body + '</div> \
     <input class="my-message-ok" type="button" value="OK"/> \
   </div>'
 
@@ -43,12 +43,12 @@ function positionMessage(elem) {
     var scroll = document.documentElement.scrollTop || document.body.scrollTop
     elem.style.top = scroll + 500 + 'px'
 
-    elem.style.left = Math.floor(document.body.clientWidth/2) - 150 + 'px'
+    elem.style.left = Math.floor(document.body.clientWidth / 2) - 150 + 'px'
 }
 
 function addCloseOnClick(messageElem) {
     var input = messageElem.getElementsByTagName('INPUT')[0]
-    input.onclick = function() {
+    input.onclick = function () {
         messageElem.parentNode.removeChild(messageElem)
     }
 }

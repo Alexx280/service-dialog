@@ -7,21 +7,23 @@ html, body {
     height: 100%;
     overflow: hidden;
 }
-body{
-    background-image:url(pic/Logo.jpg);
+
+body {
+    background-image: url(pic/Logo.jpg);
     background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
     color: #ffffff;
 }
 
-.wrapper{
+.wrapper {
     position: relative;
     min-height: 100%;
     width: 100%;
 }
+
 /*текущее дата и время*/
-#doc_time{
+#doc_time {
     color: black;
     text-align: center;
     width: 100%;
@@ -32,6 +34,7 @@ body{
     height: 35px;
     margin-bottom: -140px;
 }
+
 .content {
     position: absolute;
     width: 100%;
@@ -41,21 +44,22 @@ body{
     padding-bottom: 90px;
     /*margin: 0 auto;*/
 }
+
 /*Заголовок на первой странице*/
-#inner{
-    position:relative;
-    top:175px;
-    padding-bottom:30px;
-    width:100%;
-    height:50px;
-    border-radius:30px;
-    color:forestgreen;
-    font-family:arial;
-    text-align:center;
-    font-size:30px;
-    vertical-align:top;
-    text-shadow:1px 1px 1px yellow;
-    z-index:2;
+#inner {
+    position: relative;
+    top: 175px;
+    padding-bottom: 30px;
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    color: forestgreen;
+    font-family: arial;
+    text-align: center;
+    font-size: 30px;
+    vertical-align: top;
+    text-shadow: 1px 1px 1px yellow;
+    z-index: 2;
     margin: 0 auto;
 }
 
@@ -67,7 +71,8 @@ body{
     left: 880px;
     opacity: 0;
 }
-#comment0{
+
+#comment0 {
     position: absolute;
     text-align: center;
     top: 220px;
@@ -83,7 +88,7 @@ body{
     transform: rotate(15deg);
 }
 
-#comment05{
+#comment05 {
     position: absolute;
     height: 100px;
     width: 250px;
@@ -94,65 +99,75 @@ body{
 }
 
 /*миссия компании*/
-#miss{
-    position:absolute;
-    top:130%;
-    left: 53%; /* Отступ в процентах от левого края окна
-    width: 550px; /* Ширина блока */
+#miss {
+    position: absolute;
+    top: 130%;
+    left: 53%;
+    /* Отступ в процентах от левого края окна
+       width: 550px; /* Ширина блока */
     height: 100px; /* Высота блока */
     margin-top: -50px; /* Отрицательный отступ от верхнего края страницы, должен равняться половине высоты блока со знаком минус */
     margin-left: -295px; /* Отрицательный отступ от левого края страницы, должен равняться половине высоты блока со знаком минус */
 }
+
 #centr, #quest, #edu {
     /*position:absolute;*/
     margin: auto;
     background-color: forestgreen;
     padding: 30px;
-    border-radius:15px;
+    border-radius: 15px;
     color: white;
     box-shadow: 1px 1px 10px black;
     border: 1px solid #fff;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 /*сообщение о результате теста на последнем листе END и во втором окне авторизации INTER*/
 .tc {
-    text-align:center;
-    font-size:1.5em;
+    text-align: center;
+    font-size: 1.5em;
 }
+
 .ti {
-    text-align:center;
-    font-size:1.2em;
+    text-align: center;
+    font-size: 1.2em;
 }
+
 /*заголовки разделов в учебной части b и в тесте*/
 .tq {
-    text-align:center;
-    font-size:1.2em;
+    text-align: center;
+    font-size: 1.2em;
     line-height: 0.1em;
 }
+
 /*комментарий по завершении учебной части лист-20*/
 .tf {
-    text-align:center;
+    text-align: center;
 }
+
 #centr-w {
     text-align: center;
     position: relative;
     width: 100%;
 }
+
 #centr-q {
     position: absolute;
-    top:400px;
-    left:50%;
+    top: 400px;
+    left: 50%;
 }
+
 /*Поле ввода даннных о пользователе*/
 #centr {
     display: inline-block;
-    margin-top:0;
+    margin-top: 0;
     /*font-size:1.2em;*/
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
-    top:180px;
+    top: 180px;
 
 }
+
 /*#centr > form > input
 {color: black}
 
@@ -166,28 +181,30 @@ text-decoration-color: #080808}*/
 
 /*Таймер в вопросах*/
 #timer {
-    position:absolute;
-    top:95%;
-    font-size:1.5em;
+    position: absolute;
+    top: 95%;
+    font-size: 1.5em;
     z-index: 10;
-    font-family:arial;
+    font-family: arial;
     color: red;
 }
+
 /*Поле для вопросов*/
 #quest {
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     width: 950px;
-    height: 450px;     /*450px;*/
+    height: 450px; /*450px;*/
     margin-top: -200px; /* Отрицательный отступ от верхнего края страницы, должен равняться половине высоты блока со знаком минус */
     margin-left: -510px; /* Отрицательный отступ от левого края страницы, должен равняться половине высоты блока со знаком минус */
     font-family: Arial, Helvetica, sans-serif;
-    font-size:1.2em;
+    font-size: 1.2em;
 }
+
 /*Поле для текста учебной части*/
 #edu {
-    position:absolute;
+    position: absolute;
     top: 49%;
     left: 40%;
     width: 1050px;
@@ -195,8 +212,9 @@ text-decoration-color: #080808}*/
     margin-top: -220px; /* Отрицательный отступ от верхнего края страницы, должен равняться половине высоты блока со знаком минус */
     margin-left: -420px; /* Отрицательный отступ от левого края страницы, должен равняться половине высоты блока со знаком минус */
     font-family: Arial, Helvetica, sans-serif;
-    font-size:1.3em;
+    font-size: 1.3em;
 }
+
 /*#shest {
     -moz-appearance: textfield;
 }
@@ -207,15 +225,17 @@ text-decoration-color: #080808}*/
 /*расположение рисунков в учебной части*/
 .leftimg {
 
-    float:left; /* Выравнивание по левому краю */
+    float: left; /* Выравнивание по левому краю */
     margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
     border-radius: 50px;
 }
+
 .leftimg1 {
-    float:left; /* Выравнивание по левому краю */
+    float: left; /* Выравнивание по левому краю */
     margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
 }
-.rightimg  {
+
+.rightimg {
     float: right; /* Выравнивание по правому краю  */
     margin: 7px 0 7px 7px; /* Отступы вокруг картинки */
     border-radius: 50px;
@@ -227,12 +247,14 @@ text-decoration-color: #080808}*/
 }
 
 /*шрифт текста на первой-главной странице учебной части*/
-.te {text-align:center;
-    font-size:1.8em;
+.te {
+    text-align: center;
+    font-size: 1.8em;
     font-family: "Monotype Corsiva";
     text-shadow: 2px 1px 1px #000000;
     /*font-family: Arial, Helvetica, sans-serif;*/
 }
+
 /*
 .knopka, .knopka1, .knopka2, .knopka3 {
     position:absolute;
@@ -302,8 +324,11 @@ text-decoration-color: #080808}*/
     top: 93%;
     width: 94%;
 }
+
 /*задержка всплывания текста в учебной части*/
-.delay1  { animation-delay: 0.5s}
+.delay1 {
+    animation-delay: 0.5s
+}
 
 /*Кнопки переходов в учебной части*/
 .butt1 {
@@ -311,17 +336,20 @@ text-decoration-color: #080808}*/
     top: 500px;
     left: 325px;
 }
+
 .butt2 {
     position: absolute;
     top: 500px;
     left: 575px;
 }
+
 .butt4 {
     position: absolute;
     top: 500px;
     left: 450px;
     width: 130px;
 }
+
 .butt3 {
     position: absolute;
     top: 500px;
@@ -378,7 +406,6 @@ text-decoration-color: #080808}*/
 }
 */
 
-
 /* Cначала обозначаем стили для IE8 и более старых версий
 т.е. здесь мы немного облагораживаем стандартный чекбокс. */
 .checkbox {
@@ -388,11 +415,13 @@ text-decoration-color: #080808}*/
     height: 17px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 /* Это для всех браузеров, кроме совсем старых, которые не поддерживают
 селекторы с плюсом. Показываем, что label кликабелен. */
 .checkbox + label {
     cursor: pointer;
-    }
+}
+
 /* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.
 Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,
 в них все нижеследующие стили не сработают. */
@@ -402,11 +431,13 @@ text-decoration-color: #080808}*/
     position: absolute;
     opacity: 0;
 }
+
 .checkbox:not(checked) + label {
     position: relative; /* будем позиционировать псевдочекбокс относительно label */
     padding: 0 0 0 60px; /* оставляем слева от label место под псевдочекбокс */
 
 }
+
 /* Оформление первой части чекбокса в выключенном состоянии (фон). */
 .checkbox:not(checked) + label:before {
     content: '';
@@ -417,8 +448,9 @@ text-decoration-color: #080808}*/
     height: 20px;
     border-radius: 13px;
     background: #CDD1DA;
-    box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, .2);
 }
+
 /* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
 .checkbox:not(checked) + label:after {
     content: '';
@@ -429,22 +461,24 @@ text-decoration-color: #080808}*/
     height: 16px;
     border-radius: 10px;
     background: #FFF;
-    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
     transition: all .2s; /* анимация, чтобы чекбокс переключался плавно */
 
 }
+
 /* Меняем фон чекбокса, когда он включен. */
 .checkbox:checked + label:before {
     background: #9FD468;
 }
+
 /* Сдвигаем переключатель чекбокса, когда он включен. */
 .checkbox:checked + label:after {
     left: 26px;
 }
+
 /* Показываем получение фокуса.
 .checkbox:focus + label:before {
     /*box-shadow: 0 0 0 3px rgba(255,255,0,.5);}*/
-
 
 /* комментарии в учебной части */
 .comment + label,
@@ -453,10 +487,10 @@ text-decoration-color: #080808}*/
 .comment4 + label,
 .comment42 + label,
 .comment61 + label,
-.comment51 + label
-{
+.comment51 + label {
     cursor: pointer;
 }
+
 /*форма окна комментария*/
 
 .comment:checked + label:after,
@@ -465,8 +499,7 @@ text-decoration-color: #080808}*/
 .comment4:checked + label:after,
 .comment42:checked + label:after,
 .comment61:checked + label:after,
-.comment51:checked + label:after
-{
+.comment51:checked + label:after {
     font-size: 0.7em;
     padding: 5px;
     color: #080808;
@@ -494,11 +527,13 @@ text-decoration-color: #080808}*/
     top: -60px;
     left: 330px;
 }
+
 .comment3:checked + label:after {
     content: 'Папки в локальной сети, дополнительные локальные и сетеввые программы, доступ к конкретным сайтам в Интернет, удалённый доступ';
     top: 155px;
     left: 710px;
 }
+
 .comment4:checked + label:after {
     content: 'Лица, не являющиеся сотрудниками службы ИТС и Службы безпасности компании, и лица которых вы не знаете ';
     top: 25px;
@@ -506,11 +541,13 @@ text-decoration-color: #080808}*/
     height: 100px;
     width: 200px
 }
+
 .comment42:checked + label:after {
     content: 'Рекламные объявления о продаже и прибретении личных вещей, рекламные предложения не имеющие отношения к компании';
     top: 130px;
     left: 15px;
 }
+
 .comment61:checked + label:after {
     content: 'Шифрование папки с файлами можно выполнить заархивировав папку программой WinRAR, поставив на архив пароль. На файлы Word и Excel можно поставить пароль отдельно, зайдя в меню документа: "Файл\\Сведения\\Защита документа" ';
     top: 80px;
@@ -518,6 +555,7 @@ text-decoration-color: #080808}*/
     width: 200px;
     height: 195px;
 }
+
 .comment51:checked + label:after {
     content: 'Письма, содержащие конфиденциальную информацию следует удалять, нужную информацию необходимо сохранить в папке отдела на сервере либо на своём компьютере';
     top: 210px;
@@ -525,6 +563,7 @@ text-decoration-color: #080808}*/
     height: 160px;
     width: 200px
 }
+
 /*Кнопки переходов в тесте*/
 .table-form {
     padding: 5px;
@@ -534,6 +573,7 @@ text-decoration-color: #080808}*/
     color: white;
     cursor: pointer;
 }
+
 /* количество пройденных страниц в тесте */
 .strings {
     position: absolute;
@@ -542,10 +582,12 @@ text-decoration-color: #080808}*/
     z-index: 2;
     color: white;
 }
+
 /*минимизация больного текста*/
 .mini {
     font-size: 0.65em;
 }
+
 /*
 .strings-edu {
     position: absolute;
@@ -556,16 +598,15 @@ text-decoration-color: #080808}*/
 }
 */
 
-.ui-draggable
-{
-    padding:15px;
-    border-style:solid;
-    border-width:1px;
-    width:130px;
-    height:100px;
+.ui-draggable {
+    padding: 15px;
+    border-style: solid;
+    border-width: 1px;
+    width: 130px;
+    height: 100px;
 }
-.ui-draggable-dragging
-{
-    background-color:#ecbfda;
-    color:red;
+
+.ui-draggable-dragging {
+    background-color: #ecbfda;
+    color: red;
 }

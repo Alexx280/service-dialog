@@ -3,62 +3,61 @@
 //Определение IP адреса комппьютера
 function GetRealIp()
 {
-    if (!empty($_SERVER['HTTP_CLIENT_IP']))
-    {
-        $ip=$_SERVER['HTTP_CLIENT_IP'];
-    }
-    elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
-    {
-        $ip=$_SERVER['HTTP_X_FORWARDED_FOR'];
-    }
-    else
-    {
-        $ip=$_SERVER['REMOTE_ADDR'];
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+        $ip = $_SERVER['HTTP_CLIENT_IP'];
+    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    } else {
+        $ip = $_SERVER['REMOTE_ADDR'];
     }
     return $ip;
 }
 
 // Выбор файла для подключения
-function getfile(){
-    $komp="";
-    $komp=GetRealIP();
-    $namekomp= gethostbyaddr($komp);
+function getfile()
+{
+    $komp = "";
+    $komp = GetRealIP();
+    $namekomp = gethostbyaddr($komp);
 
-    if ($namekomp !="sbexam") {  //  выбираем файл
+    if ($namekomp != "sbexam") {  //  выбираем файл
         $config = parse_ini_file('config/1connect.ini', true);
-    }
-    else
-    {
+    } else {
         $config = parse_ini_file('config/config.ini', true);
     }
     return $config;
 }
-// Подключеие к базе
-function podkl($config){
 
-    $pod =new mysqli($config["database"]["host"], $config["database"]["username"], $config["database"]["password"],$config["database"]["name"]);
+// Подключеие к базе
+function podkl($config)
+{
+
+    $pod = new mysqli($config["database"]["host"], $config["database"]["username"], $config["database"]["password"], $config["database"]["name"]);
     $pod->query("SET NAMES utf8");
     return $pod;
 }
 
-function connect(){
-    $config=getfile();
-    $link =podkl($config);
-    return $link;}
+function connect()
+{
+    $config = getfile();
+    $link = podkl($config);
+    return $link;
+}
 
-function insert ($table, $values)
+function insert($table, $values)
 {
     foreach ($values as $key => $item) {
-        $col = $col.$key.', ';
-        $zna = $zna.'"'.$item. '", ';
+        $col = $col . $key . ', ';
+        $zna = $zna . '"' . $item . '", ';
     }
-    $col=substr($col, 0, strlen($col)-2);
-    $zna=substr($zna, 0, strlen($zna)-2);
+    $col = substr($col, 0, strlen($col) - 2);
+    $zna = substr($zna, 0, strlen($zna) - 2);
 
-    $query="INSERT INTO " . $table . " (" . $col . ") VALUES (" . $zna . ")";   //'INSERT INTO bam_users (name, family, e_mail, login, password) VALUES ("'.$fn.'","'.$sn.'","'.$em.'","'.$lo.'","'.$pa.'")'
+    $query = "INSERT INTO " . $table . " (" . $col . ") VALUES (" . $zna . ")";   //'INSERT INTO bam_users (name, family, e_mail, login, password) VALUES ("'.$fn.'","'.$sn.'","'.$em.'","'.$lo.'","'.$pa.'")'
     return $query;
 }
-function select($cols=array("*"), $table, $where)
+
+function select($cols = array("*"), $table, $where)
 {
     $cols_string = "";
     global $db;
@@ -80,16 +79,16 @@ function select($cols=array("*"), $table, $where)
     return $temp;
 }
 
-function check ($family, $pasp_s){
+function check($family, $pasp_s)
+{
     global $link;
-    $link=connect();
+    $link = connect();
     $res = $link->query("SELECT * FROM `lama` WHERE `family`= '$family' AND `pasp_s` ='$pasp_s' ");
     if ($res->fetch_assoc()) return $res;
     else {
         return false;
-           }
     }
-
+}
 
 
 Class link_
@@ -111,7 +110,7 @@ Class link_
 
         if ($result = $this->$link->query($query)) {
 
-           if (!is_object($result)) {
+            if (!is_object($result)) {
                 return $this->$link->insert_id;
             }
             $data = array();
@@ -122,6 +121,7 @@ Class link_
         return $data;
     }
 }
-$link= new link_;
+
+$link = new link_;
 ?>
 

@@ -15,12 +15,12 @@
  * console.log(agentInfo.browser.family); // Chrome
  *
  */
-(function(root, undefined) {
+(function (root, undefined) {
     // Shim Array.prototype.map if necessary
     // Production steps of ECMA-262, Edition 5, 15.4.4.19
     // Reference: http://es5.github.com/#x15.4.4.19
     if (!Array.prototype.map) {
-        Array.prototype.map = function(callback, thisArg) {
+        Array.prototype.map = function (callback, thisArg) {
             var T, A, k;
             if (this == null) {
                 throw new TypeError(" this is null or not defined");
@@ -74,12 +74,13 @@
         };
     }
     // Detect
-    var detect = root.detect = function() {
+    var detect = root.detect = function () {
         // Context
-        var _this = function() {};
+        var _this = function () {
+        };
         // Regexes
         var regexes = {
-            browser_parsers: [ {
+            browser_parsers: [{
                 regex: "^(Opera)/(\\d+)\\.(\\d+) \\(Nintendo Wii",
                 family_replacement: "Wii",
                 manufacturer: "Nintendo"
@@ -489,8 +490,8 @@
             }, {
                 regex: "(MSIE) (\\d+)\\.(\\d+)",
                 family_replacement: "IE"
-            } ],
-            os_parsers: [ {
+            }],
+            os_parsers: [{
                 regex: "(Android) (\\d+)\\.(\\d+)(?:[.\\-]([a-z0-9]+))?"
             }, {
                 regex: "(Android)\\-(\\d+)\\.(\\d+)(?:[.\\-]([a-z0-9]+))?"
@@ -651,9 +652,9 @@
             }, {
                 regex: "(Linux|BSD)",
                 other: true
-            } ],
-            mobile_os_families: [ "Windows Phone 6.5", "Windows CE", "Symbian OS" ],
-            device_parsers: [ {
+            }],
+            mobile_os_families: ["Windows Phone 6.5", "Windows CE", "Symbian OS"],
+            device_parsers: [{
                 regex: "HTC ([A-Z][a-z0-9]+) Build",
                 device_replacement: "HTC $1",
                 manufacturer: "HTC"
@@ -977,25 +978,25 @@
             }, {
                 regex: "(bot|borg|google(^tv)|yahoo|slurp|msnbot|msrbot|openbot|archiver|netresearch|lycos|scooter|altavista|teoma|gigabot|baiduspider|blitzbot|oegp|charlotte|furlbot|http%20client|polybot|htdig|ichiro|mogimogi|larbin|pompos|scrubby|searchsight|seekbot|semanticdiscovery|silk|snappy|speedy|spider|voila|vortex|voyager|zao|zeal|fast\\-webcrawler|converacrawler|dataparksearch|findlinks)",
                 device_replacement: "Spider"
-            } ],
-            mobile_browser_families: [ "Firefox Mobile", "Opera Mobile", "Opera Mini", "Mobile Safari", "webOS", "IE Mobile", "Playstation Portable", "Nokia", "Blackberry", "Palm", "Silk", "Android", "Maemo", "Obigo", "Netfront", "AvantGo", "Teleca", "SEMC-Browser", "Bolt", "Iris", "UP.Browser", "Symphony", "Minimo", "Bunjaloo", "Jasmine", "Dolfin", "Polaris", "BREW", "Chrome Mobile", "Chrome Mobile iOS", "UC Browser", "Tizen Browser" ]
+            }],
+            mobile_browser_families: ["Firefox Mobile", "Opera Mobile", "Opera Mini", "Mobile Safari", "webOS", "IE Mobile", "Playstation Portable", "Nokia", "Blackberry", "Palm", "Silk", "Android", "Maemo", "Obigo", "Netfront", "AvantGo", "Teleca", "SEMC-Browser", "Bolt", "Iris", "UP.Browser", "Symphony", "Minimo", "Bunjaloo", "Jasmine", "Dolfin", "Polaris", "BREW", "Chrome Mobile", "Chrome Mobile iOS", "UC Browser", "Tizen Browser"]
         };
         // Parsers
-        _this.parsers = [ "device_parsers", "browser_parsers", "os_parsers", "mobile_os_families", "mobile_browser_families" ];
+        _this.parsers = ["device_parsers", "browser_parsers", "os_parsers", "mobile_os_families", "mobile_browser_families"];
         // Types
-        _this.types = [ "browser", "os", "device" ];
+        _this.types = ["browser", "os", "device"];
         // Regular Expressions
-        _this.regexes = regexes || function() {
+        _this.regexes = regexes || function () {
             var results = {};
-            _this.parsers.map(function(parser) {
+            _this.parsers.map(function (parser) {
                 results[parser] = [];
             });
             return results;
         }();
         // Families
-        _this.families = function() {
+        _this.families = function () {
             var results = {};
-            _this.types.map(function(type) {
+            _this.types.map(function (type) {
                 results[type] = [];
             });
             return results;
@@ -1003,7 +1004,7 @@
         // Utility Variables
         var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype, nativeForEach = ArrayProto.forEach, nativeIndexOf = ArrayProto.indexOf;
         // Find Utility
-        var find = function(ua, obj) {
+        var find = function (ua, obj) {
             var ret = {};
             for (var i = 0; i < obj.length; i++) {
                 ret = obj[i](ua);
@@ -1014,25 +1015,25 @@
             return ret;
         };
         // Remove Utility
-        var remove = function(arr, props) {
-            each(arr, function(obj) {
-                each(props, function(prop) {
+        var remove = function (arr, props) {
+            each(arr, function (obj) {
+                each(props, function (prop) {
                     delete obj[prop];
                 });
             });
         };
         // Contains Utility
-        var contains = function(obj, target) {
+        var contains = function (obj, target) {
             var found = false;
             if (obj == null) return found;
             if (nativeIndexOf && obj.indexOf === nativeIndexOf) return obj.indexOf(target) != -1;
-            found = any(obj, function(value) {
+            found = any(obj, function (value) {
                 return value === target;
             });
             return found;
         };
         // Each Utility
-        var each = forEach = function(obj, iterator, context) {
+        var each = forEach = function (obj, iterator, context) {
             if (obj == null) return;
             if (nativeForEach && obj.forEach === nativeForEach) {
                 obj.forEach(iterator, context);
@@ -1049,8 +1050,8 @@
             }
         };
         // Extend Utiltiy
-        var extend = function(obj) {
-            each(slice.call(arguments, 1), function(source) {
+        var extend = function (obj) {
+            each(slice.call(arguments, 1), function (source) {
                 for (var prop in source) {
                     obj[prop] = source[prop];
                 }
@@ -1058,11 +1059,11 @@
             return obj;
         };
         // Check String Utility
-        var check = function(str) {
+        var check = function (str) {
             return !!(str && typeof str != "undefined" && str != null);
         };
         // To Version String Utility
-        var toVersionString = function(obj) {
+        var toVersionString = function (obj) {
             var output = "";
             obj = obj || {};
             if (check(obj)) {
@@ -1079,18 +1080,19 @@
             return output;
         };
         // To String Utility
-        var toString = function(obj) {
+        var toString = function (obj) {
             obj = obj || {};
             var suffix = toVersionString(obj);
             if (suffix) suffix = " " + suffix;
             return obj && check(obj.family) ? obj.family + suffix : "";
         };
         // Parse User-Agent String
-        _this.parse = function(ua) {
+        _this.parse = function (ua) {
             // Parsers Utility
-            var parsers = function(type) {
-                return _this.regexes[type + "_parsers"].map(function(obj) {
+            var parsers = function (type) {
+                return _this.regexes[type + "_parsers"].map(function (obj) {
                     var regexp = new RegExp(obj.regex), rep = obj[(type === "browser" ? "family" : type) + "_replacement"], major_rep = obj.major_version_replacement;
+
                     function parser(ua) {
                         var m = ua.match(regexp);
                         if (!m) return null;
@@ -1103,11 +1105,13 @@
                         ret.man = obj.manufacturer || null;
                         return ret;
                     }
+
                     return parser;
                 });
             };
             // User Agent
-            var UserAgent = function() {};
+            var UserAgent = function () {
+            };
             // Browsers Parsed
             var browser_parsers = parsers("browser");
             // Operating Systems Parsed
@@ -1147,10 +1151,10 @@
             }
             // Determine Device Type
             var mobile_agents = {};
-            var mobile_browser_families = _this.regexes.mobile_browser_families.map(function(str) {
+            var mobile_browser_families = _this.regexes.mobile_browser_families.map(function (str) {
                 mobile_agents[str] = true;
             });
-            var mobile_os_families = _this.regexes.mobile_os_families.map(function(str) {
+            var mobile_os_families = _this.regexes.mobile_os_families.map(function (str) {
                 mobile_agents[str] = true;
             });
             // Is Spider
@@ -1166,7 +1170,7 @@
             // Determine Device Manufacturer
             a.device.manufacturer = a.browser.man || a.os.man || a.device.man || null;
             // Cleanup Objects
-            remove([ a.browser, a.os, a.device ], [ "tablet", "man" ]);
+            remove([a.browser, a.os, a.device], ["tablet", "man"]);
             // Return Agent
             return a;
         };
@@ -1189,10 +1193,11 @@
     // AMD define happens at the end for compatibility with AMD
     // that don't enforce next-turn semantics on modules
     if (typeof define === "function" && define.amd) {
-        define(function(require) {
+        define(function (require) {
             return detect;
         });
     }
-})(window);/**
+})(window);
+/**
  * Created by busygin on 20.01.2016.
  */

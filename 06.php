@@ -1,22 +1,24 @@
 <?php
 session_start();
 include_once 'head.tpl';
-include_once ("funk.php");
-if (substr(__FILE__,38,2)+0<10)
-{$chislo = "0".strval(substr(__FILE__,38,2)+0-1);}
-else
-{$chislo = strval(substr(__FILE__,38,2)+0-1);}
-$link=connect();
-$q = "UPDATE `motiv` SET `quest" .$chislo. "` = '" . $_POST['text' . $chislo ] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
+include_once("funk.php");
+if (substr(__FILE__, 38, 2) + 0 < 10) {
+    $chislo = "0" . strval(substr(__FILE__, 38, 2) + 0 - 1);
+} else {
+    $chislo = strval(substr(__FILE__, 38, 2) + 0 - 1);
+}
+$link = connect();
+$q = "UPDATE `motiv` SET `quest" . $chislo . "` = '" . $_POST['text' . $chislo] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
 $res = $link->query($q);
 ?>
-    <!DOCTYPE HTML>
-    <html>
-    <div id='centr-q'>
-    <div id="quest" >
+<!DOCTYPE HTML>
+<html>
+<div id='centr-q'>
+    <div id="quest">
 
-        <p class="tq"></p><br />
-        <form method="post" action="<?php echo "0".(substr(__FILE__,38,2)+1) ?>.php">
+        <p class="tq"></p><br/>
+
+        <form method="post" action="<?php echo "0" . (substr(__FILE__, 38, 2) + 1) ?>.php">
             Покупатель первым сказал, что у него есть свой пакет, нужно ли продавцу предлагать пакет покупателю?<br><br>
             <!--
             Укажите верные утверждения:<br /><br />
@@ -31,19 +33,21 @@ $res = $link->query($q);
             <input id="kt5" class="checkbox" type="checkbox" name="kt5" value="1" />
             <label for="kt5">Нет правильного варианта</label><br>
             -->
-            А. Да  <br>  В. Нет  <br>  С. Не знаю  <br>  D. Я требую выполнения
+            А. Да <br> В. Нет <br> С. Не знаю <br> D. Я требую выполнения
             <br><br><br>
+
             <p><textarea rows="7" cols="133" name="text06"></textarea></p><br><br>
-            <div style="text-align: center;"> <input type="submit" value="Дальше" class="table-form"/></br></div>
+
+            <div style="text-align: center;"><input type="submit" value="Дальше" class="table-form"/></br></div>
 
         </form>
-        <div class="strings"><p><?php echo (substr(__FILE__,38,2)) ?>/18</p></div>
+        <div class="strings"><p><?php echo(substr(__FILE__, 38, 2)) ?>/18</p></div>
     </div>
-    </div>
- <!--   <a href="end.php">
-        <div class="knopka3 ">
-            <p>Далее</p>
-        </div>
-    </a>-->
+</div>
+<!--   <a href="end.php">
+       <div class="knopka3 ">
+           <p>Далее</p>
+       </div>
+   </a>-->
 
-    </html>
+</html>
