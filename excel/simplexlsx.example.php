@@ -5,20 +5,21 @@ if (1/*isset($_FILES['file'])*/) {
     require_once "simplexlsx.class.php";
     $xlsx = new SimpleXLSX('country.xlsx'/*$_FILES['file']['tmp_name']*/);
 
-   // echo '<h1>Parsing Result</h1>';
+    // echo '<h1>Parsing Result</h1>';
     echo '<table border="1" cellpadding="3" style="border-collapse: collapse">';
 
     list($cols,) = $xlsx->dimension();
-    $f=0;
+    $f = 0;
 
-    foreach( $xlsx->rows() as $k => $r) {
+    foreach ($xlsx->rows() as $k => $r) {
 
 //if ($k == 0) continue; // skip first row
         echo '<tr>';
-        for( $i = 0; $i < $cols; $i++){
+        for ($i = 0; $i < $cols; $i++) {
             $a[] = array_fill($f, 1, $r);
             $f++;
-            echo '<td>'.( (isset($r[$i])) ? $r[$i] : '&nbsp;' ).'</td>';}
+            echo '<td>' . ((isset($r[$i])) ? $r[$i] : '&nbsp;') . '</td>';
+        }
         echo '</tr>';
 
     }
@@ -38,24 +39,25 @@ unset($value);
 */
 /*Записываем массив из файла в переменную */
 $z = 0;
-$k=0;
+$k = 0;
 do {
-    $b[$k]=$a[$z][$z];
-    $z=$z+5;
-    $k=$k+1;
-} while ($z <=500);
+    $b[$k] = $a[$z][$z];
+    $z = $z + 5;
+    $k = $k + 1;
+} while ($z <= 500);
 //print_r($b[100][2]);
 
 /*Разделяем ФИО на 3 части, добавляем дату, login, password*/
-$w=0;$e=0;
+$w = 0;
+$e = 0;
 do {
-$c[$e]=str_word_count($b[$w][1], 1);
-array_push($c[$e],$b[$w][0]);
-array_push($c[$e],$b[$w][2]);
-array_push($c[$e],$b[$w][3]);
-    $w=$w+1;
-    $e=$e+1;
-} while ($w <=100);
+    $c[$e] = str_word_count($b[$w][1], 1);
+    array_push($c[$e], $b[$w][0]);
+    array_push($c[$e], $b[$w][2]);
+    array_push($c[$e], $b[$w][3]);
+    $w = $w + 1;
+    $e = $e + 1;
+} while ($w <= 100);
 print_r($c[10]);
 /*Назначаем именные ключи
 $name_key=array('family','name','father_name','date','login','password');
@@ -67,10 +69,8 @@ do{
 //print_r($name_array_file[1]['date']);*/
 
 
-
-
-$array1 = array(array('a','y','c'), "red", "blue", "red");
-$array2 = array(array('a','b','c'),"green", "yellow", "red");
+$array1 = array(array('a', 'y', 'c'), "red", "blue", "red");
+$array2 = array(array('a', 'b', 'c'), "green", "yellow", "red");
 $result = array_diff($array1[0], $array2[0]);
 //print_r(count($result));
 
