@@ -1,7 +1,24 @@
 ﻿<?php
+
+
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+
 include_once 'funk.php';
 include_once 'head_edu.tpl';
 
+
+$text='111211';
+
+if ( !file_exists( "zzaa.txt" ) ) { // если файл НЕ существует
+    $fp = fopen ("zzaa.txt", "w");
+    echo "Ура";
+    fwrite($fp,$text);
+    fclose($fp);
+} else {
+    echo 'Увы, файл уже существует.';
+}
 ?>
 <!DOCTYPE HTML>
 
