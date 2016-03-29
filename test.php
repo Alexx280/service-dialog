@@ -14,4 +14,3 @@ $res = $link->query($login) ;
 $row = $res->fetch_assoc();
 */
 ?>
-
