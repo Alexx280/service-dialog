@@ -5,11 +5,15 @@
     <style type="text/css">
         table {
             border-collapse: collapse; /* Убираем двойные линии между ячейками */
-            width: 600px; /* Ширина таблицы */
+            width: 1000px; /* Ширина таблицы */
         }
 
         th {
             background: #fc0;
+
+        }
+        tr:nth-child(2n) {
+            background: lightgreen; /* Цвет фона */
         }
     </style>
 
@@ -50,10 +54,7 @@ if ($_POST['place'] === '2016-05%') {
 };
 
 //echo ('<b>Места инструктирования сотрудников за  '.$data.' </b><br>');
-$names[0] = "Офис на ул.Кулагина";
-$names[1] = "ТЦ Мармелайт";
-$names[2] = "Офис на ул.Ленина";
-$names[3] = "ТЦ Мирамикс";
+
 function print_table($name_place)
 {
     echo('<table border="2"><tr ><th colspan="3">' . $name_place . '</th></tr>');
@@ -73,7 +74,7 @@ function print_table($name_place)
         echo('<tr>');
         echo('<td>' . $i . ' <br> </td>');
         $i = $i + 1;
-        echo('<td>' . $family . ' ' . $name_user . ' ' . $father_name_user . ' <br> </td>');
+        echo('<td width="300">' . $family . ' ' . $name_user . ' ' . $father_name_user . ' <br> </td>');
         if ($job) {
             echo('<td>' . $job . ', работает с ' . $first_day . '<br> </td>');
         } else {
@@ -101,20 +102,44 @@ print_table($data);
     <div><input type="submit" value="Показать ответы" class="table-form"/><br></div>
 </form>
 <?php
+
 function print_otvety($family1, $name1)
 {
-    echo('<table border="2"  ><tr ><th colspan="2">' . $family1 . ' ' . $name1 . '</th></tr>');
+    $question = array(
+        "Что такое Стандарт обслуживания на кассе? В чем его цель?",
+        "Какова цель проверок Тайными покупателями?",
+        "Какие пункты Стандарта обслуживания влияют на оценку по итогам проверки?",
+        "Какой балл является максимальным за выполнение СД по новой системе оценки?",
+        "Каким образом рассчитывается оценка по итогам проверки?",
+        "Покупатель первым сказал, что у него есть свой пакет, нужно ли продавцу предлагать пакет покупателю?",
+        "Что является нарушением/невыполнением Сервисного Диалога (при каких условиях ставится ответ «Нет» по какому-либо пункту)?",
+        "Что означает ответ «Не точно» по какому- либо пункту Сервисного Диалога?",
+        "Что означает ответ «-» в анкете?",
+        "Является ли нарушением, если кассир спросил про бонусную карту после того, как назвал сумму покупки?",
+        "Влияет ли на оценку кассира примечание Тайного Покупателя о том, что кассир, например, не поздоровалась с предыдущим или со следующим покупателем?",
+        "Что является основанием для вручения продавцам/кассирам ежегодного звания «Гордость компании»?",
+        "Если вам не понятна какая- либо информация в анкете программа, ваши действия?",
+        "Просматриваете ли вы анкету с подробными ответами и комментариями ТП в программе?",
+        "Какие формы отчетов в модуле ТП вы используете?",
+        "Какие вопросы или сложности в работе модуля ТП у вас возникают?",
+        "Какие сложности у вас возникают при работе с персоналом по итогам проверок ТП?",
+        "Ваши вопросы и пожелания"
+    );
+    echo('<table border="2"  ><tr ><th colspan="3">' . $family1 . ' ' . $name1 . '</th></tr>');
 
     $link = connect();
     //$login= "SELECT * FROM `lama` WHERE date_test LIKE '".$_POST['place']."' AND `place` = '".$name_place."'";
     $login = "SELECT * FROM `motiv` WHERE family = '" . $_POST['family1'] . "'";
+
     //$login= "SELECT * FROM `motiv` WHERE family = '".$_POST['family1']."' AND name = ".$_POST['name1']."'";
     $res = $link->query($login);
-    $i = 1;
+
+        $i = 1;
     while ($row = $res->fetch_assoc()) {
         while ($i < 10) {
             echo('<tr>');
             echo('<td width="20">' . $i . ' <br> </td>');
+            echo('<td width="250">' .  $question[$i-1] . ' <br> </td>');
             echo('<td>' . $row['quest0' . $i . ''] . '<br> </td>');
             echo('</tr>');
             $i = $i + 1;
@@ -122,17 +147,29 @@ function print_otvety($family1, $name1)
         while ($i > 9 && $i < 19) {
             echo('<tr>');
             echo('<td width="20">' . $i . ' <br> </td>');
+            echo('<td width="100">' . $question[$i-1] . ' <br> </td>');
             echo('<td>' . $row['quest' . $i . ''] . '<br> </td>');
             echo('</tr>');
             $i = $i + 1;
         }
     };
     echo('</table><br>');
+
+    $text=$question[0];
+    $text1=$question[1];
+
+    if ( !file_exists( $family1." ".$name1.".txt" ) ) { // если файл НЕ существует
+        $fp = fopen ($family1." ".$name1.".txt", "w");
+        fwrite($fp,$text);
+        fwrite($fp,$text1);
+        fclose($fp);
+    } else {
+        echo 'Увы, файл уже существует.';
+    }
 }
 
 print_otvety($_POST['family1'], $_POST['name1']);
 
-echo $row['quest01']
 ?>
 </body>
 </html>
