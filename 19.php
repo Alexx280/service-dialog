@@ -10,6 +10,9 @@ if (substr(__FILE__, 38, 2) + 0 < 10) {
 $link = connect();
 $q = "UPDATE `motiv` SET `quest" . $chislo . "` = '" . $_POST['text' . $chislo] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
 $res = $link->query($q);
+
+$code = "UPDATE `lama` SET `code` = '" . rand(1000, 9999) . "' WHERE `lama_id`=" . $_SESSION['lama_id'];
+$res = $link->query($code);
 unset ($_SESSION['id_motiv']);
 ?>
 
@@ -29,6 +32,7 @@ unset ($_SESSION['id_motiv']);
 
     </div>
 </div>
+
 <!--   <a href="end.php">
        <div class="knopka3 ">
            <p>Далее</p>
