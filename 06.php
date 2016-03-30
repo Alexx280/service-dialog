@@ -36,7 +36,7 @@ $res = $link->query($q);
             А. Да <br> В. Нет <br> С. Не знаю <br> D. Я требую выполнения
             <br><br><br>
 
-            <p><textarea rows="7" cols="133" name="text06"></textarea></p><br><br>
+            <p><textarea rows="7" class="text" name="text06"></textarea></p><br><br>
 
             <div style="text-align: center;"><input type="submit" value="Дальше" class="table-form"/></br></div>
 

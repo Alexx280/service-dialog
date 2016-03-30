@@ -28,7 +28,7 @@ $res = $link->query($q);
             D. Не знаю, как просматривать анкеты <br>
             <br><br><br>
 
-            <p><textarea rows="7" cols="133" name="text14"></textarea></p><br><br>
+            <p><textarea rows="7" class="text" name="text14"></textarea></p><br><br>
 
             <div style="text-align: center;">
                 <input type="submit" value="Дальше" class="table-form"/><br>

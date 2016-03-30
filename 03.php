@@ -57,7 +57,7 @@ $res = $link->query($q);
                 19. Посмотрите на Покупателя, улыбнитесь и поблагодарите его: «Спасибо за покупку, приходите к нам еще!»<br>
             </p>
 
-            <p><textarea rows="1" cols="133" name="text03"></textarea></p><br>
+            <p><textarea rows="1" class="text" name="text03"></textarea></p><br>
 
             <div style="text-align: center;"><input type="submit" value="Дальше" class="table-form"/></br></div>
         </form>

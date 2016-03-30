@@ -25,7 +25,7 @@ $res = $link->query($q);
 
             А. Да <br> В. Нет <br> С. Не знаю <br> D. Не уверен(а), считаю, что влияет <br><br><br>
 
-            <p><textarea rows="7" cols="133" name="text11"></textarea></p><br><br>
+            <p><textarea rows="7" class="text" name="text11"></textarea></p><br><br>
 
             <div style="text-align: center;">
                 <input type="submit" value="Дальше" class="table-form"/><br>

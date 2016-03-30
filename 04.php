@@ -26,7 +26,7 @@ $res = $link->query($q);
             <br>
             А. 5 баллов <br> В. 8 баллов <br> С. 10 баллов <br> D. Не знаю <br><br><br><br><br>
 
-            <p><textarea rows="7" cols="133" name="text04"></textarea></p><br><br>
+            <p><textarea rows="7" class="text" name="text04"></textarea></p><br><br>
 
             <div style="text-align: center;"><input type="submit" value="Дальше" class="table-form"/><br></div>
         </form>

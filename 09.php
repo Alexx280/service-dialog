@@ -40,7 +40,7 @@ $res = $link->query($q);
             В. Продавец не сказала фразу <br>
             С. Не знаю <br><br><br><br><br>
 
-            <p><textarea rows="7" cols="133" name="text09"></textarea></p><br><br>
+            <p><textarea rows="7" class="text" name="text09"></textarea></p><br><br>
 
             <div style="text-align: center;"><input type="submit" value="Дальше" class="table-form"/></br></div>
 

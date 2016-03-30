@@ -28,7 +28,7 @@ $res = $link->query($q);
             D. Не знаю и не понимаю <br>
             <br><br><br>
 
-            <p><textarea rows="7" cols="133" name="text12"></textarea></p><br><br>
+            <p><textarea rows="7" class="text" name="text12"></textarea></p><br><br>
 
             <div style="text-align: center;">
                 <input type="submit" value="Дальше" class="table-form"/><br>

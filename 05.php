@@ -37,7 +37,7 @@ $res = $link->query($q);
             <label for="ot4">Ответственность за соблюдения правил информационной безопасности несут только руководители подразделений и служба безопасности</label><br>
             <input id="ot5" class="checkbox" type="checkbox" name="otv5" value="0" />
             <label for="ot5">Ответственность за соблюдения правил информационной безопасности несут все сотрудники</label><br>-->
-            <p><textarea rows="7" cols="133" name="text05"></textarea></p><br><br>
+            <p><textarea rows="7" class="text" name="text05"></textarea></p><br><br>
 
 
             <div style="text-align: center;"><input type="submit" value="Дальше" class="table-form"/></br></div>
