@@ -5,10 +5,10 @@ include_once("funk.php");
 
 if (substr(__FILE__, 38, 2) + 0 <= 10) {
     $chislo = "0" . strval(substr(__FILE__, 38, 2) + 0 - 1);
-    echo $chislo;
+
 } else {
     $chislo = strval(substr(__FILE__, 38, 2) + 0 - 1);
-    echo $chislo;
+
 }
 $link = connect();
 $q = "UPDATE `motiv` SET `quest" . $chislo . "` = '" . $_POST['text' . $chislo] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
@@ -27,7 +27,7 @@ $res = $link->query($q);
 
             А. Да <br> В. Нет <br> С. Не знаю <br> D. Не уверен(а), считаю, что влияет <br><br><br>
 
-            <p><textarea rows="7" class="text" name="text10"></textarea></p><br><br>
+            <p><textarea rows="7" class="text" name="text10"></textarea></p><br><br><br>
 
             <div style="text-align: center;">
                 <input type="submit" value="Дальше" class="table-form"/><br>
