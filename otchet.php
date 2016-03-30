@@ -154,18 +154,18 @@ function print_otvety($family1, $name1)
         }
     };
     echo('</table><br>');
+    /*
+        $text=$question[0];
+        $text1=$question[1
 
-    $text=$question[0];
-    $text1=$question[1];
-
-    if ( !file_exists( $family1." ".$name1.".txt" ) ) { // если файл НЕ существует
-        $fp = fopen ($family1." ".$name1.".txt", "w");
-        fwrite($fp,$text);
-        fwrite($fp,$text1);
-        fclose($fp);
-    } else {
-        echo 'Увы, файл уже существует.';
-    }
+        /*if ( !file_exists( $family1." ".$name1.".txt" ) ) { // если файл НЕ существует
+            $fp = fopen ($family1." ".$name1.".txt", "w");
+            fwrite($fp,$text);
+            fwrite($fp,$text1);
+            fclose($fp);
+        } else {
+            echo 'Увы, файл уже существует.';
+        }*/
 }
 
 print_otvety($_POST['family1'], $_POST['name1']);

@@ -8,7 +8,7 @@ ini_set('display_startup_errors', 1);
 include_once 'funk.php';
 include_once 'head_edu.tpl';
 
-
+/*
 $text='111211';
 
 if ( !file_exists( "zzaa.txt" ) ) { // если файл НЕ существует
@@ -18,7 +18,7 @@ if ( !file_exists( "zzaa.txt" ) ) { // если файл НЕ существуе
     fclose($fp);
 } else {
     echo 'Увы, файл уже существует.';
-}
+}*/
 ?>
 <!DOCTYPE HTML>
 
