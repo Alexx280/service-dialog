@@ -356,6 +356,10 @@ text-decoration-color: #080808}*/
     left: 950px;
 }
 
+.text{
+    width: 100%;
+}
+
 /* cyrillic
 @font-face {
     font-family: 'Lobster';
