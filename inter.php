@@ -7,7 +7,8 @@ $link = connect();
 unset ($_SESSION['lama_id']);}
 else {};
 /*Активация сессии с указанными именем и фамилией*/
-$login = "SELECT id_motiv FROM `motiv` WHERE family= '" . $_POST['family'] . "' AND name = '" . $_POST['name'] . "'";
+//$login = "SELECT id_motiv FROM `motiv` WHERE family= '" . $_POST['family'] . "' AND name = '" . $_POST['name'] . "'";
+$login = "SELECT id_motiv FROM `motiv` WHERE family= '" . $_POST['family'] . "' AND name = '" . $_POST['name'] . "' AND code = '" . $_POST['code'] . "'";
 $res = $link->query($login);
 $row = $res->fetch_assoc();
 $_SESSION['id_motiv'] = $row['id_motiv'];
