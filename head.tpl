@@ -14,7 +14,7 @@
 
 
     <script type="text/javascript">
-        /*  var time = 120;
+          var time = 300;
          var interval = setInterval(function() {
          --time;
          document.getElementById('timer').innerHTML = 'Время на этот вопрос: '+Math.floor(time / 60) + ':' + (time % 60);
@@ -24,7 +24,7 @@
          window.location = 'end.php';
 
          }
-         }, 1000);*/
+         }, 1000);
     </script>
 
 </head>
