@@ -15,7 +15,7 @@ $_SESSION['id_motiv'] = $row['id_motiv'];
 /*Если имя есть в базе*/
 if (isset($_SESSION['id_motiv'])) {
     /*вводим информацию предоставленную пользователем, отчество...*/
-    echo("20" . date('y-m-d'));
+    /*echo("20" . date('y-m-d'));*/
     $income = "UPDATE motiv SET father_name = '" . $_POST['father_name'] . "',
                                      `job` = '" . $_POST['job'] . "',
                                `date_test` = '20" . date('y-m-d') . "',
@@ -39,7 +39,7 @@ if (isset($_SESSION['id_motiv'])) {
                 <p class="tc"> Добрый день, ' . $_POST['name'] . '  ' . $_POST['father_name'] . ' .<br>
                 Предлагаем вам ответить на 18 вопросов.<br>
                 Вернуться на предыдущитй вопрос будет невозможно.<br>
-                На каждый вопроc выделено по 2 минуты<br>
+                На каждый вопроc выделено по 5 минут<br>
                 <br><br></p>
                 <form method="post" action="01.php">
                     <input type="submit" value="Вперёд" class="table-form"/>
