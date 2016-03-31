@@ -72,9 +72,10 @@
                             <option value="Офис на ул.Кулагина">Офис на ул.Кулагина</option>
                             <option value="Офис на ул.Ленина">Офис на ул.Ленина</option>
                         </select><br>
+                    -->
                     Код:<br>
                     <input type="text" name="code" id="co" size="30" required="required" placeholder="0000" title="Код получите у специалиста по безопасности"></br>
-                    -->
+
                     <br>
                     <br>
                     <input type="submit" value="Начать" class="table-form"/>
