@@ -21,7 +21,7 @@
          if (time === 0) {
          clearInterval(interval);
          alert('Время вышло!');
-         window.location = 'end.php';
+             window.location = '19.php';
 
          }
          }, 1000);
