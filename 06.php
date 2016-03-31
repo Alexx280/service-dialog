@@ -33,7 +33,7 @@ $res = $link->query($q);
             <input id="kt5" class="checkbox" type="checkbox" name="kt5" value="1" />
             <label for="kt5">Нет правильного варианта</label><br>
             -->
-            А. Да <br> В. Нет <br> С. Не знаю <br> D. Я требую выполнения
+            А. Да <br> В. Нет <br> С. Не знаю <br> D. Я требую проговаривания фразы
             <br><br><br>
 
             <p><textarea rows="7" class="text" name="text06"></textarea></p><br><br><br>

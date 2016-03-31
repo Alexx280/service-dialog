@@ -25,7 +25,7 @@ $res = $link->query($q);
         <form method="post" action="<?php echo(substr(__FILE__, 38, 2) + 1) ?>.php" style="">
             Является ли нарушением, если кассир спросил про бонусную карту после того, как назвал сумму покупки?<br><br>
 
-            А. Да <br> В. Нет <br> С. Не знаю <br> D. Не уверен(а), считаю, что влияет <br><br><br>
+            А. Да <br> В. Нет <br> С. Не знаю <br> D. Не уверен(а), считаю, что является <br><br><br>
 
             <p><textarea rows="7" class="text" name="text10"></textarea></p><br><br><br>
 
