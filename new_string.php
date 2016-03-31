@@ -8,7 +8,8 @@ $link = connect();
 /*внесение пользователя в базу*/
 
 if ($_POST['parol-na'] == 'gigabite8srx') {
-    $login = "INSERT INTO `motiv` (`family`, `name`) VALUES ('" . $_POST['family'] . "','" . $_POST['name'] . "')";
+    $login = "INSERT INTO `motiv` (`family`, `name`,`code`)
+              VALUES ('" . $_POST['family'] . "','" . $_POST['name'] . "','" . rand(1000, 9999) . "')";
     /*$login = "INSERT INTO `lama` (`family`, `name`,`code`)
         VALUES ('" . $_POST['family'] . "','" . $_POST['name'] . "','" . rand(1000, 9999) . "')";*/
 
