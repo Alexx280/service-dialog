@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+<h2>AJAX</h2>
+
+<button type="button" onclick="loadDoc()">Request data</button>
+
+<p id="demo"></p>
+
+<form action="" id="conteiner">
+    <div id="forma">
+        <div><label></label><select id="countrydropdown"></select></div>
+        <div><label></label><select id="areadropdown"></select></div>
+        <div><label></label><select id="citydropdown"></select></div>
+    </div>
+
+</form>
+
+
+
+<script>
+
+    /**function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                document.getElementById("demo").innerHTML = xhttp.responseText;
+            }
+        };
+        xhttp.open("GET", "ajax_demo_get.asp", true);
+        xhttp.send();
+    }
+</script>
+</body>
+</html>
+
+
+
