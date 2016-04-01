@@ -1,6 +1,7 @@
 ﻿<?php
 //session_start();
 //Определение IP адреса комппьютера
+/*
 function GetRealIp()
 {
     if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
@@ -12,11 +13,11 @@ function GetRealIp()
     }
     return $ip;
 }
-
+*/
 // Выбор файла для подключения
 function getfile()
 {
-    $komp = "";
+    /*$komp = "";
     $komp = GetRealIP();
     $namekomp = gethostbyaddr($komp);
 
@@ -24,7 +25,10 @@ function getfile()
         $config = parse_ini_file('config/1connect.ini', true);
     } else {
         $config = parse_ini_file('config/config.ini', true);
-    }
+    }*/
+    $_SERVER['REMOTE_ADDR']; //пример определения ip
+    gethostbyaddr($_SERVER['REMOTE_ADDR']); //пример определения имени по ip
+    $config = parse_ini_file('config/1connect.ini', true);
     return $config;
 }
 
