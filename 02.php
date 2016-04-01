@@ -11,6 +11,24 @@ if (substr(__FILE__, 38, 2) + 0 < 10) {
 $link = connect();
 $q = "UPDATE `motiv` SET `quest" . $chislo . "` = '" . $_POST['text' . $chislo] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
 $res = $link->query($q);
+
+/*Проверка последовательности анкетирования*/
+$login = "SELECT `number_site` FROM `motiv` WHERE id_motiv= '" . $_SESSION['id_motiv'] . "'";
+$res = $link->query($login);
+$row = $res->fetch_assoc();
+echo ($row['number_site']);
+echo ('<br>');
+$number = $row['number_site'];
+$number++;
+if ($number == substr(__FILE__, 38, 2) + 0){
+    $q = "UPDATE `motiv` SET `number_site` = '" . $number . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
+    $res = $link->query($q);
+    echo ($number);
+}
+else{
+    echo ('Вы не верно открыли страницу, отвечайте с начала и до конца');
+
+}
 ?>
 
 <!DOCTYPE HTML>
