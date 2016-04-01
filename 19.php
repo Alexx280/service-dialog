@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once 'head.tpl';
+include_once 'head1.tpl';
 include_once("funk.php");
 if (substr(__FILE__, 38, 2) + 0 < 10) {
     $chislo = "0" . strval(substr(__FILE__, 38, 2) + 0 - 1);
