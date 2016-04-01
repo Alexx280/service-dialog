@@ -2,6 +2,9 @@
 session_start();
 include_once 'head1.tpl';
 include_once("funk.php");
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
 $link = connect();
 /*if ($_SESSION['lama_id'] != '') {
 unset ($_SESSION['lama_id']);}
@@ -39,15 +42,17 @@ if (isset($_SESSION['id_motiv'])) {
             <div id="centr">
                 <p class="tc"> Добрый день, ' . $_POST['name'] . '  ' . $_POST['father_name'] . ' .<br>
                 Предлагаем вам ответить на 18 вопросов.<br>
-                Вернуться на предыдущитй вопрос будет невозможно.<br>
+                Вернуться на предыдущий вопрос будет невозможно.<br>
                 На каждый вопроc выделено по 5 минут<br>
                 <br><br></p>
                 <form method="post" action="01.php">
                     <input type="submit" value="Вперёд" class="table-form"/>
                 </form><br>
+                <!--
                 <form method="post" action="curs_edu19.php"></p>
                     <input type="submit" value="Почитать инструкции" class="table-form" />
                 </form>
+                -->
             </div>
         </div>
         ');
