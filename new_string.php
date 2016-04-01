@@ -1,6 +1,6 @@
 ﻿<?php
 include_once 'head1.tpl';
-include_once 'mdb.php';
+//include_once 'mdb.php';
 include_once 'funk.php';
 $login = "";
 
@@ -82,8 +82,8 @@ if ($_POST['parol'] == 'gigabite8srx') {
             </br>
             </br>
         </form>
-        <form method="post" action="index.php">
-            <input type="submit" value="Обучение" class="table-form"/>
+        <form method="post" action="otchet.php">
+            <input type="submit" value="Отчёт" class="table-form"/>
             </br>
             </br>
         </form>
