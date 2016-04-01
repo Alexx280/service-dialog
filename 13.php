@@ -21,12 +21,7 @@ $res = $link->query($q);
 
         <form method="post" action="<?php echo(substr(__FILE__, 38, 2) + 1) ?>.php" style="">
             Если вам не понятна какая- либо информация в анкете программа, ваши действия?<br><br>
-
-            <br>
-            <br>
-            <br>
-            <br>
-            <br><br><br>
+            <br><br><br><br><br><br><br><br>
 
             <p><textarea rows="7" class="text" name="text13"></textarea></p><br><br>
 
