@@ -54,9 +54,8 @@
 
                     Должность:<br>
                     <input type="text" name="job" id="jo" size="30" required="required"><br>
-                    Дата устройства на работу:<br>
-                    <input type='date' name="first_day" id="jo" size="30" required="required" placeholder="гггг-мм-дд"
-                           title="Введите дату в формате гггг-мм-дд"><br>
+                    Опыт работы:<br>
+                    <input type='text' name="first_day" id="jo" size="30" required="required" placeholder=""><br>
                     <!--
                     Руководитель:<br>
                     <input type="text" name="boss" id="bo" size="30" required="required" placeholder="Фамилия И.О."><br>
