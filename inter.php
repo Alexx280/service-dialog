@@ -22,6 +22,7 @@ if (isset($_SESSION['id_motiv'])) {
     /*echo("20" . date('y-m-d'));*/
     $income = "UPDATE motiv SET father_name = '" . $_POST['father_name'] . "',
                                      `job` = '" . $_POST['job'] . "',
+                                   `place` = '" . $_POST['place'] . "',
                                `date_test` = '20" . date('y-m-d') . "',
                                `first_day` = '" . $_POST['first_day'] . "'
                                                                         WHERE id_motiv = " . $_SESSION['id_motiv'];

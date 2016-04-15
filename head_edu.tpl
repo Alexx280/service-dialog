@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset='UTF-8'>
-    <title> Обучение по информационной безопасности </title>
+    <title> Сервисный диалог на кассе </title>
     <link rel='stylesheet' type='text/css' href='design.css'/>
     <link rel='stylesheet' type='text/css' href='animate.css'/>
     <script type="text/javascript" src="function.js"></script>

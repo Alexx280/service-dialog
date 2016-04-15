@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset='UTF-8'>
-    <title> Тест по информационной безопасности </title>
+    <title> Сервисный диалог на кассе </title>
     <link rel='stylesheet' type='text/css' href='design.css'/>
     <script type="text/javascript" src="function.js"></script>
     <script type="text/javascript" src="jquery.js"></script>

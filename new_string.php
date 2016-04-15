@@ -1,4 +1,4 @@
-﻿<?php
+﻿﻿<?php
 include_once 'head1.tpl';
 //include_once 'mdb.php';
 include_once 'funk.php';
@@ -19,36 +19,39 @@ if ($_POST['parol-na'] == 'gigabite8srx') {
     };
 } else {
 };
-//echo ($_POST['date_input']);
+            //echo ($_POST['date_input']);
 
-/*проверка наличия сотрудника в базе*/
-if ($_POST['parol'] == 'gigabite8srx') {
-    $input = "SELECT * FROM `motiv` WHERE `family` = '" . $_POST['fam'] . "'";
+            /*проверка наличия сотрудника в базе*/
+            if ($_POST['parol'] == 'gigabite8srx') {
+                $input = "SELECT * FROM `motiv` WHERE `family` = '" . $_POST['fam'] . "'";
 
-//if ($_POST['fam'] != '') {
-    //  $res = $link->query($input) ;}
-//else {};
-//$input= "SELECT * FROM `lama` WHERE `date_input` = '".date('Y-m-d')."'";
-//$input= "SELECT (`family`, `name`) FROM `lama` WHERE `date_test` ='".date('Y-m-d')."'";
-//echo $input;
-//if ($_POST['family'] != '') {
-    /*    while($res = $link->query($input)){
-            $row=$res->fetch_assoc();
-            var_dump($row);
-        }*/
-    $res = $link->query($input);
-    while ($row = $res->fetch_assoc()) {
-        //var_dump($row['family'],$row['name']);
-        foreach ($row as $key => $val) {
-            if ($key == 'family' || $key == 'name' || $key == 'zachet' || $key == 'code') {
-                echo "$val\n";
+            //if ($_POST['fam'] != '') {
+                //  $res = $link->query($input) ;}
+            //else {};
+            //$input= "SELECT * FROM `lama` WHERE `date_input` = '".date('Y-m-d')."'";
+            //$input= "SELECT (`family`, `name`) FROM `lama` WHERE `date_test` ='".date('Y-m-d')."'";
+            //echo $input;
+            //if ($_POST['family'] != '') {
+                /*    while($res = $link->query($input)){
+                        $row=$res->fetch_assoc();
+                        var_dump($row);
+                    }*/
+
+
+                $res = $link->query($input);
+                while ($row = $res->fetch_assoc()) {
+                    //var_dump($row['family'],$row['name']);
+                    foreach ($row as $key => $val) {
+                        if ($key == 'family' || $key == 'name' || $key == 'zachet' || $key == 'code') {
+                            //echo "$val\n";
+                        }
+                    }
+                }
             }
-        }
-    }
-} else {
-};
+            else {
+            };
 
-//else {};
+            //else {};
 
 ?>
 
@@ -76,16 +79,17 @@ if ($_POST['parol'] == 'gigabite8srx') {
             <input type="submit" value="Внести в базу" class="table-form"/>
 
         </form>
-        </br>
+        <br>
         <form method="post" action="test.php">
             <input type="submit" value="Тестирование" class="table-form"/>
-            </br>
-            </br>
+            <br>
+            <br>
         </form>
         <form method="post" action="otchet.php">
+
             <input type="submit" value="Отчёт" class="table-form"/>
-            </br>
-            </br>
+            <br>
+            <br>
         </form>
         <!--<form onclick="setupMessageButton('Добавлено:', '$input')" >
             <input type="button" class="table-form" value="Добавленные сегодня" />
@@ -99,7 +103,25 @@ if ($_POST['parol'] == 'gigabite8srx') {
             <br>
             <input type="submit" value="Проверить в базе" class="table-form"/>
         </form>
+        <br>
+<?php
 
+if ($_POST['parol'] == 'gigabite8srx') {
+
+    $input = "SELECT * FROM `motiv` WHERE `family` = '" . $_POST['fam'] . "'";
+    $res = $link->query($input);
+    while ($row = $res->fetch_assoc()) {
+        //var_dump($row['family'],$row['name']);
+        foreach ($row as $key => $val) {
+            if ($key == 'family' || $key == 'name' || $key == 'zachet' || $key == 'code') {
+                echo ("$val\n");
+            }
+        }
+    }
+} else {
+};
+
+?>
     </div>
 
 </div>

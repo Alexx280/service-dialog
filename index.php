@@ -39,10 +39,10 @@ if ( !file_exists( "zzaa.txt" ) ) { // если файл НЕ существуе
 
     <p class="animated flipInX te "> в торговой розничной сети ГК Лама </p>
 
-    <div class="butt4">
+    <div class="butt5">
         <a href="test.php">
-            <button type="button" class="btn btn-success btn-lg btn3d" style="width: 135px"><span
-                    class="glyphicon glyphicon-ok"></span> Тест
+            <button type="button" class="btn btn-success btn-lg btn3d" style="width: 300px"><span
+                    class="glyphicon glyphicon-ok"></span> Ответить на вопросы
             </button>
         </a>
     </div>

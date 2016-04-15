@@ -30,7 +30,7 @@ $res = $link->query($q);
 
             <p><textarea rows="7" class="text" name="text14"></textarea></p><br><br>
 
-            <div style="text-align: center;">
+            <div id="button-next" style="text-align: center;">
                 <input type="submit" value="Дальше" class="table-form"/><br>
             </div>
 

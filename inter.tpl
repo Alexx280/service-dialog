@@ -48,7 +48,7 @@
 
             Должность:<br>
             <input type="text" name="job" id="jo" size="30" required="required"></br>
-            Руководитель:</br>
+            Руководитель:<br>
             <input type="text" name="boss" id="bo" size="30" required="required" placeholder="Фамилия И.О."></br>
             Код:</br>
             <input type="text" name="code" id="co" size="30" required="required" placeholder="0000"

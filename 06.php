@@ -7,47 +7,50 @@ if (substr(__FILE__, 38, 2) + 0 < 10) {
 } else {
     $chislo = strval(substr(__FILE__, 38, 2) + 0 - 1);
 }
+$text=$_POST['text'];
 $link = connect();
-$q = "UPDATE `motiv` SET `quest" . $chislo . "` = '" . $_POST['text' . $chislo] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
+$q = "UPDATE `motiv` SET `quest" . $chislo . "` = '" . $_POST['text'] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
 $res = $link->query($q);
+
 ?>
 <!DOCTYPE HTML>
 <html>
 <div id='centr-q'>
     <div id="quest">
 
-        <p class="tq"></p><br/>
+        <p class="tq"></p> <br/>
 
         <form method="post" action="<?php echo "0" . (substr(__FILE__, 38, 2) + 1) ?>.php">
-            Покупатель первым сказал, что у него есть свой пакет, нужно ли продавцу предлагать пакет покупателю?<br><br>
+            Каким образом рассчитывается оценка по итогам проверки?<br>
+            <br><br><br>
+            <br><br><br>
+            <br>
+            <br>
             <!--
             Укажите верные утверждения:<br /><br />
-            <input id="kt1" class="checkbox" type="checkbox" name="kt1" value="0" />
-            <label for="kt1">К коммерческой тайне относится вся информация в организации</label><br>
-            <input id="kt2" class="checkbox" type="checkbox" name="kt2" value="0" />
-            <label for="kt2">Коммерческая тайна содержится только в финансовых и юридических документах</label><br>
-            <input id="kt3" class="checkbox" type="checkbox" name="kt3" value="0" />
-            <label for="kt3">Коммерческая тайна это различная информация позволяющая получить доход</label><br>
-            <input id="kt4" class="checkbox" type="checkbox" name="kt4" value="1" />
-            <label for="kt4">Я не буду работать с коммерческой тайной</label><br>
-            <input id="kt5" class="checkbox" type="checkbox" name="kt5" value="1" />
-            <label for="kt5">Нет правильного варианта</label><br>
-            -->
-            А. Да <br> В. Нет <br> С. Не знаю <br> D. Я требую проговаривания фразы
-            <br><br><br>
+            <input id="ot1" class="checkbox" type="checkbox" name="otv1" value="0" />
+            <label for="ot1">Для получения доступа к ресурсам сети сотруднику необходимо позвонить Администраторам корпоративной сети</label><br>
+            <input id="ot2" class="checkbox" type="checkbox" name="otv2" value="0" />
+            <label for="ot2">Для получения доступа к ресурсам сети сотруднику необходимо написать обращение системным администраторам (итилиум) или обратиться в Руководителю</label><br>
+            <input id="ot3" class="checkbox" type="checkbox" name="otv3" value="0" />
+            <label for="ot3">Для получения доступа к ресурсам сети сотруднику сначала обратиться в отдел информационной безопасности, и затем к Администраторам корпоративной сети</label><br>
+            <input id="ot4" class="checkbox" type="checkbox" name="otv4" value="0" />
+            <label for="ot4">Ответственность за соблюдения правил информационной безопасности несут только руководители подразделений и служба безопасности</label><br>
+            <input id="ot5" class="checkbox" type="checkbox" name="otv5" value="0" />
+            <label for="ot5">Ответственность за соблюдения правил информационной безопасности несут все сотрудники</label><br>-->
+            <p><textarea rows="7" class="text" name="text05"></textarea></p><br><br>
 
-            <p><textarea rows="7" class="text" name="text06"></textarea></p><br><br><br>
 
-            <div style="text-align: center;"><input type="submit" value="Дальше" class="table-form"/></br></div>
+            <div id="button-next" style="text-align: center;"><input type="submit" value="Дальше" class="table-form"/></br></div>
 
         </form>
+
         <div class="strings"><p><?php echo(substr(__FILE__, 38, 2)) ?>/18</p></div>
     </div>
 </div>
-<!--   <a href="end.php">
-       <div class="knopka3 ">
-           <p>Далее</p>
-       </div>
-   </a>-->
-
+<!--<a href="6.php">
+    <div class="knopka3 ">
+        <p>Далее</p>
+    </div>
+</a>-->
 </html>

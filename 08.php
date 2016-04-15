@@ -40,7 +40,7 @@ $res = $link->query($q);
 
             <p><textarea rows="7" class="text" name="text08"></textarea></p><br><br>
 
-            <div style="text-align: center;"><input type="submit" value="Дальше" class="table-form"/></br></div>
+            <div id="button-next" style="text-align: center;"><input type="submit" value="Дальше" class="table-form"/></br></div>
 
         </form>
         <div class="strings"><p><?php echo(substr(__FILE__, 38, 2)) ?>/18</p></div>
