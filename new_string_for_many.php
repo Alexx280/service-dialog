@@ -37,7 +37,7 @@ if ($_POST['family02'] != '') {
 <div id='centr-w'>
     <div id='centr'>
         <form method="post" action="#">
-            Фамилия:      Имя:<br>
+            Фамилия и Имя<br>
             №1 <input type="text" id="fa" name="family" size="30" required="required">
             <input type="text" id="na" name="name" size="30" required="required"><br>
             <?php
@@ -57,8 +57,8 @@ if ($_POST['family02'] != '') {
             №2 <input type="text" id="fa" name="family01" size="30" >
             <input type="text" id="na" name="name01" size="30" ><br>
             <?php
-            if ($_POST['family'] != '') {
-                $input = "SELECT * FROM `motiv` WHERE `family` = '" . $_POST['family'] . "'";
+            if ($_POST['family01'] != '') {
+                $input = "SELECT * FROM `motiv` WHERE `family` = '" . $_POST['family01'] . "'";
                 $res = $link->query($input);
                 while ($row = $res->fetch_assoc()) {
                     foreach ($row as $key => $val) {
@@ -73,8 +73,8 @@ if ($_POST['family02'] != '') {
             №3 <input type="text" id="fa" name="family02" size="30" >
             <input type="text" id="na" name="name02" size="30" ><br>
             <?php
-            if ($_POST['family'] != '') {
-                $input = "SELECT * FROM `motiv` WHERE `family` = '" . $_POST['family'] . "'";
+            if ($_POST['family02'] != '') {
+                $input = "SELECT * FROM `motiv` WHERE `family` = '" . $_POST['family02'] . "'";
                 $res = $link->query($input);
                 while ($row = $res->fetch_assoc()) {
                     foreach ($row as $key => $val) {
