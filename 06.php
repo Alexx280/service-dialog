@@ -21,25 +21,15 @@ $res = $link->query($q);
         <p class="tq"></p> <br/>
 
         <form method="post" action="<?php echo "0" . (substr(__FILE__, 38, 2) + 1) ?>.php">
-            Каким образом рассчитывается оценка по итогам проверки?<br>
-            <br><br><br>
-            <br><br><br>
-            <br>
-            <br>
-            <!--
-            Укажите верные утверждения:<br /><br />
-            <input id="ot1" class="checkbox" type="checkbox" name="otv1" value="0" />
-            <label for="ot1">Для получения доступа к ресурсам сети сотруднику необходимо позвонить Администраторам корпоративной сети</label><br>
-            <input id="ot2" class="checkbox" type="checkbox" name="otv2" value="0" />
-            <label for="ot2">Для получения доступа к ресурсам сети сотруднику необходимо написать обращение системным администраторам (итилиум) или обратиться в Руководителю</label><br>
-            <input id="ot3" class="checkbox" type="checkbox" name="otv3" value="0" />
-            <label for="ot3">Для получения доступа к ресурсам сети сотруднику сначала обратиться в отдел информационной безопасности, и затем к Администраторам корпоративной сети</label><br>
-            <input id="ot4" class="checkbox" type="checkbox" name="otv4" value="0" />
-            <label for="ot4">Ответственность за соблюдения правил информационной безопасности несут только руководители подразделений и служба безопасности</label><br>
-            <input id="ot5" class="checkbox" type="checkbox" name="otv5" value="0" />
-            <label for="ot5">Ответственность за соблюдения правил информационной безопасности несут все сотрудники</label><br>-->
-            <p><textarea rows="7" class="text" name="text05"></textarea></p><br><br>
-
+            Каким образом рассчитывается оценка по итогам проверки?<br><br>
+            <input id="em1" class="checkbox" type="radio" name="text" value="Оценка проставляется покупателем" />
+            <label for="em1">Оценка проставляется покупателем</label> <br>
+            <input id="em2" class="checkbox" type="radio" name="text" value="Оценка проставляется в зависимости от кол-ва выполненных фраз" />
+            <label for="em2">Оценка проставляется в зависимости от кол-ва выполненных фраз</label> <br>
+            <input id="em3" class="checkbox" type="radio" name="text" value="На моё усмотрение" />
+            <label for="em3">На моё усмотрение</label> <br>
+            <input id="em4" class="checkbox" type="radio" name="text" value="Не знаю" />
+            <label for="em4">Не знаю</label> <br>
 
             <div id="button-next" style="text-align: center;"><input type="submit" value="Дальше" class="table-form"/></br></div>
 

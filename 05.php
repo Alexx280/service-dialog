@@ -35,7 +35,7 @@ $res = $link->query($q);
             <label for="em3">10 баллов</label> <br>
             <input id="em4" class="checkbox" type="radio" name="text" value="Не знаю" />
             <label for="em4">Не знаю</label> <br>
-            <br><br><br><br>
+
 
             <!--<p><textarea rows="7" class="text" name="text04"></textarea></p><br><br>-->
 

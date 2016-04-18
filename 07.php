@@ -8,10 +8,9 @@ if (substr(__FILE__, 38, 2) + 0 < 10) {
     $chislo = strval(substr(__FILE__, 38, 2) + 0 - 1);
 }
 $link = connect();
-$q = "UPDATE `motiv` SET `quest" . $chislo . "` = '" . $_POST['text' . $chislo] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
+$q = "UPDATE `motiv` SET `quest" . $chislo . "` = '" . $_POST['text'] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
 $res = $link->query($q);
 ?>
-
 <!DOCTYPE HTML>
 <html>
 <div id='centr-q'>
@@ -20,18 +19,21 @@ $res = $link->query($q);
         <p class="tq"></p><br/>
 
         <form method="post" action="<?php echo "0" . (substr(__FILE__, 38, 2) + 1) ?>.php">
-            Что является нарушением/невыполнением Сервисного Диалога (при каких условиях ставится ответ «Нет» по
-            какому-либо пункту)?<br><br>
-            А. Когда все слова внутри фразы сказаны, но порядок слов изменен <br>
-            В. Когда изменена последовательность целой фразы в Сервисном диалоге <br>
-            С. Когда фраза не выполнена <br>
-            D. Ответы В и С <br>
-            Е. Не знаю <br>
-            <br>
+            Покупатель первым сказал, что у него есть свой пакет, нужно ли продавцу предлагать пакет покупателю?<br><br>
+            <input id="kt1" class="checkbox" type="radio" name="text" value="Да" />
+            <label for="kt1">Да</label><br>
+            <input id="kt2" class="checkbox" type="radio" name="text" value="Нет" />
+            <label for="kt2">Нет</label><br>
+            <input id="kt3" class="checkbox" type="radio" name="text" value="Не знаю" />
+            <label for="kt3">Не знаю</label><br>
+            <input id="kt4" class="checkbox" type="radio" name="text" value="Я требую проговаривания фразы" />
+            <label for="kt4">Я требую проговаривания фразы</label><br>
+            <br><br><br>
 
-            <p><textarea rows="7" class="text" name="text07"></textarea></p><br><br>
+           <!-- <p><textarea rows="7" class="text" name="text06"></textarea></p><br><br><br>-->
 
             <div id="button-next" style="text-align: center;"><input type="submit" value="Дальше" class="table-form"/></br></div>
+
         </form>
         <div class="strings"><p><?php echo(substr(__FILE__, 38, 2)) ?>/18</p></div>
     </div>
