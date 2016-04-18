@@ -11,7 +11,7 @@ $link = connect();
 $q = "UPDATE `motiv` SET `quest" . $chislo . "` = '" . $_POST['text'] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
 $res = $link->query($q);
 
-$code = "UPDATE `lama` SET `code` = '" . rand(1000, 9999) . "' WHERE `lama_id`=" . $_SESSION['id_motiv'];
+$code = "UPDATE `motiv` SET `code` = '" . rand(1000, 9999) . "' WHERE `lama_id`=" . $_SESSION['id_motiv'];
 $res = $link->query($code);
 unset ($_SESSION['id_motiv']);
 
