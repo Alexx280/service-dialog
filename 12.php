@@ -8,7 +8,7 @@ if (substr(__FILE__, 38, 2) + 0 < 10) {
     $chislo = strval(substr(__FILE__, 38, 2) + 0 - 1);
 }
 $link = connect();
-$q = "UPDATE `motiv` SET `quest" . $chislo . "` = '" . $_POST['text' . $chislo] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
+$q = "UPDATE `motiv` SET `quest" . $chislo . "` = '" . $_POST['text'] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
 $res = $link->query($q);
 ?>
 
@@ -20,15 +20,17 @@ $res = $link->query($q);
         <p class="tq"></p><br/>
 
         <form method="post" action="<?php echo(substr(__FILE__, 38, 2) + 1) ?>.php" style="">
-            Что является основанием для вручения продавцам/кассирам ежегодного звания «Гордость компании»?<br><br>
+            Как влияет на оценку кассира примечание Тайного Покупателя о том, что кассир, например, не поздоровалась с
+            предыдущим или со следующим покупателем?<br><br>
 
-            А. Максимальные оценки кассира за выполнение сервисного диалога в течении года<br>
-            В. Наибольшее кол-во оценок по сравнению с другими кассирами <br>
-            С. Наибольшее кол-во максимальных оценок по сравнению с другими <br>
-            D. Не знаю <br>
-            <br><br><br>
-
-            <p><textarea rows="7" class="text" name="text12"></textarea></p><br><br>
+            <input id="kt1" class="checkbox" type="radio" name="text" value="Снижается балл" />
+            <label for="kt1">Снижается балл</label><br>
+            <input id="kt2" class="checkbox" type="radio" name="text" value="Не снижается балл" />
+            <label for="kt2">Не снижается балл</label><br>
+            <input id="kt3" class="checkbox" type="radio" name="text" value="Это доп.информация для руководителя и сотрудника, о том, что сотрудник не всегда выполняет Сервисный диалог" />
+            <label for="kt3">Это доп.информация для руководителя и сотрудника, о том, что сотрудник не всегда выполняет Сервисный диалог</label><br>
+            <input id="kt4" class="checkbox" type="radio" name="text" value="Не уверен(а) в ответе" />
+            <label for="kt4">Не уверен(а) в ответе</label><br>
 
             <div id="button-next" style="text-align: center;">
                 <input type="submit" value="Дальше" class="table-form"/><br>

@@ -8,7 +8,7 @@ if (substr(__FILE__, 38, 2) + 0 < 10) {
     $chislo = strval(substr(__FILE__, 38, 2) + 0 - 1);
 }
 $link = connect();
-$q = "UPDATE `motiv` SET `quest" . $chislo . "` = '" . $_POST['text' . $chislo] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
+$q = "UPDATE `motiv` SET `quest" . $chislo . "` = '" . $_POST['text'] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
 $res = $link->query($q);
 ?>
 
@@ -20,16 +20,16 @@ $res = $link->query($q);
         <p class="tq"></p><br/>
 
         <form method="post" action="<?php echo(substr(__FILE__, 38, 2) + 1) ?>.php" style="">
-            Просматриваете ли вы анкету с подробными ответами и комментариями ТП в программе?<br><br>
+            Если вам не понятна какая- либо информация в анкете программа, ваши действия?<br><br>
 
-            А. Да, всегда<br>
-            В. Только если низкие оценки<br>
-            С. Нет<br>
-            D. Не знаю, как просматривать анкеты <br>
-            <br><br><br>
-
-            <p><textarea rows="7" class="text" name="text14"></textarea></p><br><br>
-
+            <input id="kt1" class="checkbox" type="radio" name="text" value="Уточняю у коллег из других магазинов" />
+            <label for="kt1">Уточняю у коллег из других магазинов</label><br>
+            <input id="kt2" class="checkbox" type="radio" name="text" value="Задаю вопросы специалисту, курирующему проверки" />
+            <label for="kt2">Задаю вопросы специалисту, курирующему проверки</label><br>
+            <input id="kt3" class="checkbox" type="radio" name="text" value="Не возникало таких ситуаций" />
+            <label for="kt3">Не возникало таких ситуаций</label><br>
+            <input id="kt4" class="checkbox" type="radio" name="text" value="Ничего не делаю" />
+            <label for="kt4">Ничего не делаю</label><br>
             <div id="button-next" style="text-align: center;">
                 <input type="submit" value="Дальше" class="table-form"/><br>
             </div>

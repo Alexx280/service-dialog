@@ -8,7 +8,7 @@ if (substr(__FILE__, 38, 2) + 0 < 10) {
     $chislo = strval(substr(__FILE__, 38, 2) + 0 - 1);
 }
 $link = connect();
-$q = "UPDATE `motiv` SET `quest" . $chislo . "` = '" . $_POST['text' . $chislo] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
+$q = "UPDATE `motiv` SET `quest" . $chislo . "` = '" . $_POST['text'] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
 $res = $link->query($q);
 ?>
 
@@ -20,28 +20,18 @@ $res = $link->query($q);
         <p class="tq"></p><br/>
 
         <form method="post" action="<?php echo "0" . (substr(__FILE__, 38, 2) + 1) ?>.php">
-            Что означает ответ «Не точно» по какому- либо пункту Сервисного Диалога?<br><br>
-            <!--
-            Вы не успеваете выпольнить работу в срок, как вы поступите:<br><br>
-            <input id="wo1" class="checkbox" type="checkbox" name="work1" value="0" />
-            <label for="wo1">Скопирую на флэшку и поработаю дома</label><br>
-            <input id="wo2" class="checkbox" type="checkbox" name="work2" value="0" />
-            <label for="wo2">Отправлю себе на почту и поработаю дома</label><br>
-            <input id="wo3" class="checkbox" type="checkbox" name="work3" value="0" />
-            <label for="wo3">Останусь на работе или приду завтра пораньше</label><br>
-            <input id="wo4" class="checkbox" type="checkbox" name="work4" value="1" />
-            <label for="wo4">Попрошу коллег помочь мне</label><br>
-            <input id="wo5" class="checkbox" type="checkbox" name="work5" value="1" />
-            <label for="wo5">Нет правильного варианта</label><br>
-            -->
-            А. Серьезное отклонение от стандарта обслуживания <br>
-            В. Любое несоответствие фразы стандарту обслуживания <br>
-            С. Не знаю <br><br><br><br><br>
-
-            <p><textarea rows="7" class="text" name="text08"></textarea></p><br><br>
+            Что является нарушением/невыполнением Сервисного Диалога (при каких условиях ставится ответ «Нет» по
+            какому-либо пункту)?<br><br>
+            <input id="kt1" class="checkbox" type="radio" name="text" value="Когда все слова внутри фразы сказаны, но порядок слов изменен" />
+            <label for="kt1">Когда все слова внутри фразы сказаны, но порядок слов изменен</label><br>
+            <input id="kt2" class="checkbox" type="radio" name="text" value="Когда не сказано несколько слов в одной фразе" />
+            <label for="kt2">Когда не сказано несколько слов в одной фразе</label><br>
+            <input id="kt3" class="checkbox" type="radio" name="text" value="Не уверен(а) в ответе" />
+            <label for="kt3">Не уверен(а) в ответе</label><br>
+            <input id="kt4" class="checkbox" type="radio" name="text" value="Когда фраза не сказана" />
+            <label for="kt4">Когда фраза не сказана</label><br>
 
             <div id="button-next" style="text-align: center;"><input type="submit" value="Дальше" class="table-form"/></br></div>
-
         </form>
         <div class="strings"><p><?php echo(substr(__FILE__, 38, 2)) ?>/18</p></div>
     </div>

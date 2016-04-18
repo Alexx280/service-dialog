@@ -8,7 +8,7 @@ if (substr(__FILE__, 38, 2) + 0 < 10) {
     $chislo = strval(substr(__FILE__, 38, 2) + 0 - 1);
 }
 $link = connect();
-$q = "UPDATE `motiv` SET `quest" . $chislo . "` = '" . $_POST['text' . $chislo] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
+$q = "UPDATE `motiv` SET `quest" . $chislo . "` = '" . $_POST['text'] . "' WHERE `id_motiv`=" . $_SESSION['id_motiv'];
 $res = $link->query($q);
 ?>
 
@@ -20,15 +20,17 @@ $res = $link->query($q);
         <p class="tq"></p><br/>
 
         <form method="post" action="<?php echo(substr(__FILE__, 38, 2) + 1) ?>.php" style="">
-            Какие формы отчетов в программе ТП вы используете?<br><br>
+            Просматриваете ли вы анкету с подробными ответами и комментариями ТП в программе?<br><br>
 
-            А. Отчет по анкетам<br>
-            В. Отчет по кассирам<br>
-            С. Не использую отчеты<br>
-            D. Нет верного варианта<br>
-            <br><br><br>
+            <input id="kt1" class="checkbox" type="radio" name="text" value="Да, всегда" />
+            <label for="kt1">Да, всегда</label><br>
+            <input id="kt2" class="checkbox" type="radio" name="text" value="Только если низкие оценки" />
+            <label for="kt2">Только если низкие оценки</label><br>
+            <input id="kt3" class="checkbox" type="radio" name="text" value="Нет" />
+            <label for="kt3">Нет</label><br>
+            <input id="kt4" class="checkbox" type="radio" name="text" value="Не знаю, как просматривать анкеты" />
+            <label for="kt4">Не знаю, как просматривать анкеты</label><br>
 
-            <p><textarea rows="7" class="text" name="text15"></textarea></p><br><br>
 
             <div id="button-next" style="text-align: center;">
                 <input type="submit" value="Дальше" class="table-form"/><br>
@@ -36,7 +38,7 @@ $res = $link->query($q);
 
         </form>
 
-        <div class="strings"><p>15/18</p></div>
+        <div class="strings"><p><?php echo(substr(__FILE__, 38, 2)) ?>/18</p></div>
     </div>
 </div>
 <!--   <a href="end.php">
