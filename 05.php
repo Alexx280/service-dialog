@@ -24,7 +24,7 @@ $res = $link->query($q);
         <p class="tq"></p> <br/>
 
         <form method="post" action="<?php echo "0" . (substr(__FILE__, 38, 2) + 1) ?>.php">
-            Какой балл является максимальным за выполнение СД на кассе?
+            Какой балл является максимальным за выполнение СД на кассе?<br>
 
             <br>
             <input id="em1" class="checkbox" type="radio" name="text" value="5 баллов" />
