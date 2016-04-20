@@ -98,7 +98,11 @@ include_once 'head1.tpl';
     </select><br><br>-->
     <input type="submit" value="Показать" class="table-form"/><br>
 
-</form>
+</form><br>
+
+        <form method="post" action="otchet1.php">
+            <input type="submit" value="Поиск адресу" class="table-form"/><br>
+        </form>
 
 <script>debugger;</script>
 <?php
