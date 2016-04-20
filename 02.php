@@ -50,7 +50,7 @@ else{
         <p class="tq"></p><br>
 
         <form method="post" action="  <?php echo "0" . (substr(__FILE__, 38, 2) + 1) ?>.php">
-            В чем цель Стандарта обслуживания? <br>
+            В чем цель Стандарта обслуживания? <br><br>
             <input id="q02_text1" class="checkbox" type="checkbox" name="text1" value="Обеспечивает конкурентное преимущество компании. <br>" />
             <label for="q02_text1">Обеспечивает конкурентное преимущество компании </label> <br>
             <input id="q02_text2" class="checkbox" type="checkbox" name="text2" value="Гарантирует «фирменное» качество обслуживания в магазинах. <br>" />
