@@ -50,7 +50,7 @@ $res = $link->query($q);
 
         </form>
 
-        <div class="strings"><p><?php echo(substr(__FILE__, 38, 2) + 1) ?>/18</p></div>
+        <div class="strings"><p><?php echo(substr(__FILE__, 38, 2)) ?>/18</p></div>
     </div>
 </div>
 <!--   <a href="end.php">
