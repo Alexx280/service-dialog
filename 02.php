@@ -24,8 +24,8 @@ $res = $link->query($q);
 $login = "SELECT `number_site` FROM `motiv` WHERE id_motiv= '" . $_SESSION['id_motiv'] . "'";
 $res = $link->query($login);
 $row = $res->fetch_assoc();
-echo ($row['number_site']);
-echo ('<br>');
+/*echo ($row['number_site']);
+echo ('<br>');*/
 $number = $row['number_site'];
 /*echo ($number+1);
 echo ('<br>');
