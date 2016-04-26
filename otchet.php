@@ -33,7 +33,7 @@ include_once 'head1.tpl';
     <div><input type="submit" value="Новый сотрудник" class="table-form"/><br></div><br>
 </form>
 
-<form method="post" action="otchet.php">
+<form id="first" method="post" action="otchet.php">
     <b>Выбирите период проведения опроса: </b><br><br>
 
     <select name="where" style="width: 150px">
@@ -267,8 +267,8 @@ function print_otvety($family1, $name1)
         echo('<td width="20">№<br> </td>');
         echo('<td width="250">Вопрос<br> </td>');
         echo('<td>Ответ сотрудника<br> </td>');
-        echo('<td width="250">Правильный ответ<br> </td>');
-        echo('<td width="100">Проверка<br> </td>');
+        echo('<td>Правильный ответ<br> </td>');
+        echo('<td>Проверка<br> </td>');
         echo('</tr>');
     } else {}
 
@@ -285,14 +285,25 @@ function print_otvety($family1, $name1)
             echo('</tr>');
             $i = $i + 1;
         }
-        while ($i > 9 && $i < 20) {
+        while ($i > 9 && $i < 15) {
             echo('<tr>');
             echo('<td width="20">' . $i . ' <br> </td>');
             echo('<td width="100">' . $question[$i-1] . ' <br> </td>');
             echo('<td align="left">' . $row['quest' . $i . ''] . '<br> </td>');
             echo('<td width="350" align="left">' .  $answers[$i-1] . ' <br> </td>');
             if (($row['quest' . $i . ''])==$answers[$i-1]){$ok = 'Yes';}else{$ok = 'No';}
-            echo('<td width="100" >'.$ok.' <br> </td>');
+            echo('<td width="80" >'.$ok.' <br> </td>');
+            echo('</tr>');
+            $i = $i + 1;
+        }
+        while ($i > 14 && $i < 20) {
+            echo('<tr>');
+            echo('<td width="20">' . $i . ' <br> </td>');
+            echo('<td width="100">' . $question[$i-1] . ' <br> </td>');
+            echo('<td align="left" colspan="3">' . $row['quest' . $i . ''] . '<br> </td>');
+            /*echo('<td width="350" align="left" > <br> </td>');
+            if (($row['quest' . $i . ''])==$answers[$i-1]){$ok = 'Yes';}else{$ok = 'No';}
+            echo('<td width="100" > <br> </td>');*/
             echo('</tr>');
             $i = $i + 1;
         }
@@ -317,6 +328,10 @@ print_otvety($_POST['family1'], $_POST['name1']);
 ?>
         </div>
 </div>
+<script>
+    document.body.innerHTML = document.body.innerHTML.replace(/Yes/g, '<center><img src="pic/butt-yes2.png"></center>');
+    document.body.innerHTML = document.body.innerHTML.replace(/No/g, '<center><img src="pic/butt-yes4.png"></center>');
+</script>
 </body>
 </html>
 
