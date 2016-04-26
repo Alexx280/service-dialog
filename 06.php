@@ -26,8 +26,8 @@ $res = $link->query($q);
             <label for="em1">Оценка проставляется покупателем</label> <br>
             <input id="em2" class="checkbox" type="radio" name="text" value="Оценка проставляется в зависимости от кол-ва выполненных фраз" />
             <label for="em2">Оценка проставляется в зависимости от кол-ва выполненных фраз</label> <br>
-            <input id="em3" class="checkbox" type="radio" name="text" value="На моё усмотрение" />
-            <label for="em3">На моё усмотрение</label> <br>
+            <input id="em3" class="checkbox" type="radio" name="text" value="Оценка проставляется от количества и точности выполненных фраз." />
+            <label for="em3">Оценка проставляется от количества и точности выполненных фраз.</label> <br>
             <input id="em4" class="checkbox" type="radio" name="text" value="Не знаю" />
             <label for="em4">Не знаю</label> <br>
 

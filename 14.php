@@ -20,7 +20,7 @@ $res = $link->query($q);
         <p class="tq"></p><br/>
 
         <form method="post" action="<?php echo(substr(__FILE__, 38, 2) + 1) ?>.php" style="">
-            Если вам не понятна какая- либо информация в анкете программа, ваши действия?<br><br>
+            Если вам не понятна какая- либо информация в анкете программы, ваши действия?<br><br>
 
             <input id="kt1" class="checkbox" type="radio" name="text" value="Уточняю у коллег из других магазинов" />
             <label for="kt1">Уточняю у коллег из других магазинов</label><br>

@@ -26,7 +26,7 @@ $res = $link->query($q);
             <input id="kt2" class="checkbox" type="radio" name="text" value="Когда одно или более слов фразы не сказаны или слова заменены другими" />
             <label for="kt2">Когда одно или более слов фразы не сказаны или слова заменены другими</label><br>
             <input id="kt3" class="checkbox" type="radio" name="text" value="Когда слова сказаны верно, но не в том порядке, что в стандарте" />
-            <label for="kt3">Когда слова сказаны верно, но не в том порядке, что в стандарте</label><br>
+            <label for="kt3">Когда слова во фразе сказаны верно, но не в том порядке, что в стандарте</label><br>
             <input id="kt4" class="checkbox" type="radio" name="text" value="Не уверен(а) в ответе" />
             <label for="kt4">Не уверен(а) в ответе</label><br>
 
