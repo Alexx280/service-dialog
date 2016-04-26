@@ -7,7 +7,7 @@ $login = "";
 $link = connect();
 /*внесение пользователей в базу*/
 
-if ($_POST['parol-na'] == 'gigabite8srx') {
+if ($_POST['parol-na'] == '321') {
     $login = "INSERT INTO `motiv` (`family`, `name`,`code`)
               VALUES ('" . $_POST['family'] . "','" . $_POST['name'] . "','" . rand(1000, 9999) . "')";
     $login01 = "INSERT INTO `motiv` (`family`, `name`,`code`)
