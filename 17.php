@@ -22,23 +22,23 @@ $res = $link->query($q);
 
         <form method="post" action="<?php echo(substr(__FILE__, 38, 2) + 1) ?>.php" style="">
             Какие вопросы или сложности в работе программы ТП у вас возникают?<br><br>
-            <input id="kt1" class="checkbox" type="checkbox" name="text1" value="Нет времени вникать в программу. " />
+            <input id="kt1" class="checkbox" type="checkbox" name="text1" value="Нет времени вникать в программу. <br>" />
             <label for="kt1">Нет времени вникать в программу</label><br>
-            <input id="kt2" class="checkbox" type="checkbox" name="text2" value="Не понятно, как и где просматривать подробную информацию по итогам проверки. " />
+            <input id="kt2" class="checkbox" type="checkbox" name="text2" value="Не понятно, как и где просматривать подробную информацию по итогам проверки. <br>" />
             <label for="kt2">Не понятно, как и где просматривать подробную информацию по итогам проверки</label><br>
-            <input id="kt3" class="checkbox" type="checkbox" name="text3" value="Не хватает каких-либо функций в программе. " />
+            <input id="kt3" class="checkbox" type="checkbox" name="text3" value="Не хватает каких-либо функций в программе. <br>" />
             <label for="kt3">Не хватает каких-либо функций в программе</label><br>
-            <input id="kt4" class="checkbox" type="checkbox" name="text4" value="Не достаточно объяснений и комментарий от покупателей. " />
+            <input id="kt4" class="checkbox" type="checkbox" name="text4" value="Не достаточно объяснений и комментарий от покупателей. <br>" />
             <label for="kt4">Не достаточно объяснений и комментарий от покупателей</label><br>
-            <input id="kt5" class="checkbox" type="checkbox" name="text5" value="Не понятны инструкции по вопросам. " />
+            <input id="kt5" class="checkbox" type="checkbox" name="text5" value="Не понятны инструкции по вопросам. <br>" />
             <label for="kt5">Не понятны инструкции по вопросам</label><br>
-            <input id="kt6" class="checkbox" type="checkbox" name="text6" value="Программа не удобна в использовании. " />
+            <input id="kt6" class="checkbox" type="checkbox" name="text6" value="Программа не удобна в использовании. <br>" />
             <label for="kt6">Программа не удобна в использовании</label><br>
-            <input id="kt7" class="checkbox" type="checkbox" name="text7" value="Сложность с правами доступа к программе ответственных лиц. " />
+            <input id="kt7" class="checkbox" type="checkbox" name="text7" value="Сложность с правами доступа к программе ответственных лиц. <br>" />
             <label for="kt7">Сложность с правами доступа к программе ответственных лиц</label><br>
-            <input id="kt8" class="checkbox" type="checkbox" name="text8" value="Отсутствие нужной информации: отчеты, вопросы и т.п. " />
+            <input id="kt8" class="checkbox" type="checkbox" name="text8" value="Отсутствие нужной информации: отчеты, вопросы и т.п. <br>" />
             <label for="kt8">Отсутствие нужной информации: отчеты, вопросы и т.п.</label><br>
-            <input id="kt9" class="checkbox" type="checkbox" name="text9" value="Все понятно, вопросов нет. " />
+            <input id="kt9" class="checkbox" type="checkbox" name="text9" value="Все понятно, вопросов нет. <br>" />
             <label for="kt9">Все понятно, вопросов нет</label><br>
             <input id="kt0" class="checkbox" type="checkbox" name="text0" value="Свой ответ: " />
             <label for="kt0">Свой ответ:</label><br>
