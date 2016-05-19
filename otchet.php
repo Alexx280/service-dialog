@@ -103,7 +103,7 @@ include_once 'funk.php';
 
         <form method="post" action="otchet1.php">
             <input type="submit" value="Поиск адресу" class="table-form"/><br>
-        </form>
+        </form><br><br>
 
 <script>debugger;</script>
 <?php

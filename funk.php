@@ -138,7 +138,7 @@ function print_otvety($family1, $name1)
         "-",
         "-"
     );
-    if ($_POST['family1'] && $_POST['parol-ot']== 'gigabite8srx') {
+    if ($_POST['family1'] && $_POST['parol-ot']== '321') {
         echo('<table border="2"  ><tr ><th colspan="5"><br>' . $family1 . ' ' . $name1 . '<br><br></th></tr>');
     } else {}
 

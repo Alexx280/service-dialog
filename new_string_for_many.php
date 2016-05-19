@@ -119,7 +119,7 @@ if ($_POST['family02'] != '') {
         <br>
 <?php
 
-if ($_POST['parol'] == 'gigabite8srx') {
+if ($_POST['parol'] == '321') {
     echo ("Имя и код доступа для прохождения анкетирования:<br>");
     $input = "SELECT * FROM `motiv` WHERE `family` = '" . $_POST['fam'] . "'";
     $res = $link->query($input);
