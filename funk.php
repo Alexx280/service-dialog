@@ -98,7 +98,7 @@ function print_otvety($family1, $name1)
 {
     $question = array(
         "Что такое Стандарт обслуживания на кассе?",
-        "В чем цель Стандарт обслуживания?",
+        "В чем цель Стандарта обслуживания?",
         "Какова цель проверок Тайными покупателями?",
         "Какие пункты Стандарта обслуживания влияют на оценку по итогам проверки?",
         "Какой балл является максимальным за выполнение СД по новой системе оценки?",
@@ -152,11 +152,11 @@ function print_otvety($family1, $name1)
     $i = 1;
     if ($_POST['family1']) {
         echo('<tr>');
-        echo('<td width="20">№<br> </td>');
-        echo('<td width="250">Вопрос<br> </td>');
-        echo('<td>Ответ сотрудника<br> </td>');
-        echo('<td>Правильный ответ<br> </td>');
-        echo('<td>Проверка<br> </td>');
+        echo('<td width="20"><p style="font-weight: bold" class="otstup-table">№</p></td>');
+        echo('<td width="250"><p style="font-weight: bold" class="otstup-table">Вопрос</p></td>');
+        echo('<td><p style="font-weight: bold" class="otstup-table">Ответ сотрудника</p> </td>');
+        echo('<td><p style="font-weight: bold" class="otstup-table">Правильный ответ</p></td>');
+        echo('<td><p style="font-weight: bold" class="otstup-table">Проверка</p></td>');
         echo('</tr>');
     } else {}
 
@@ -165,9 +165,9 @@ function print_otvety($family1, $name1)
         while ($i < 10) {
             echo('<tr >');
             echo('<td width="20">' . $i . ' <br> </td>');
-            echo('<td width="250">' .  $question[$i-1] . ' <br> </td>');
-            echo('<td align="left">' . $row['quest0' . $i . ''] . '<br> </td>');
-            echo('<td width="350"  align="left">' .  $answers[$i-1] . ' <br> </td>');
+            echo('<td width="250"><div class="otstup-table">' .  $question[$i-1] . ' </div><br> </td>');
+            echo('<td align="left"><div class="otstup-table">' . $row['quest0' . $i . ''] . '</div><br> </td>');
+            echo('<td width="350"  align="left"><div class="otstup-table">' .  $answers[$i-1] . '</div> <br> </td>');
             if (($row['quest0' . $i . ''])==$answers[$i-1]){$ok = 'Yes';}else{$ok = 'No';}
             echo('<td width="100" >'.$ok.'<br> </td>');
             echo('</tr>');
@@ -176,9 +176,9 @@ function print_otvety($family1, $name1)
         while ($i > 9 && $i < 15) {
             echo('<tr>');
             echo('<td width="20">' . $i . ' <br> </td>');
-            echo('<td width="100">' . $question[$i-1] . ' <br> </td>');
-            echo('<td align="left">' . $row['quest' . $i . ''] . '<br> </td>');
-            echo('<td width="350" align="left">' .  $answers[$i-1] . ' <br> </td>');
+            echo('<td width="100"><div class="otstup-table">' . $question[$i-1] . ' </div><br> </td>');
+            echo('<td align="left"><div class="otstup-table">' . $row['quest' . $i . ''] . '</div><br> </td>');
+            echo('<td width="350" align="left"><div class="otstup-table">' .  $answers[$i-1] . ' </div><br> </td>');
             if (($row['quest' . $i . ''])==$answers[$i-1]){$ok = 'Yes';}else{$ok = 'No';}
             echo('<td width="80" >'.$ok.' <br> </td>');
             echo('</tr>');
@@ -187,8 +187,8 @@ function print_otvety($family1, $name1)
         while ($i > 14 && $i < 20) {
             echo('<tr>');
             echo('<td width="20">' . $i . ' <br> </td>');
-            echo('<td width="100">' . $question[$i-1] . ' <br> </td>');
-            echo('<td align="left" colspan="3">' . $row['quest' . $i . ''] . '<br> </td>');
+            echo('<td width="100"><div class="otstup-table">' . $question[$i-1] . ' </div><br> </td>');
+            echo('<td align="left" colspan="3"><div class="otstup-table">' . $row['quest' . $i . ''] . '</div><br> </td>');
             /*echo('<td width="350" align="left" > <br> </td>');
             if (($row['quest' . $i . ''])==$answers[$i-1]){$ok = 'Yes';}else{$ok = 'No';}
             echo('<td width="100" > <br> </td>');*/
