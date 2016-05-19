@@ -21,11 +21,11 @@ $res = $link->query($q);
 
         <form method="post" action="<?php echo(substr(__FILE__, 38, 2) + 1) ?>.php" style="">
             Какую информацию вы просматриваете в программе ТП? (возможно несколько вариантов)<br><br>
-            <input id="kt1" class="checkbox" type="checkbox" name="text1" value="Подробную анкету" />
+            <input id="kt1" class="checkbox" type="checkbox" name="text1" value="Подробную анкету. " />
             <label for="kt1">Подробную анкету</label><br>
-            <input id="kt2" class="checkbox" type="checkbox" name="text2" value="Отчет по анкетам" />
+            <input id="kt2" class="checkbox" type="checkbox" name="text2" value="Отчет по анкетам. " />
             <label for="kt2">Отчет по анкетам   </label><br>
-            <input id="kt3" class="checkbox" type="checkbox" name="text3" value="Отчет по кассирам" />
+            <input id="kt3" class="checkbox" type="checkbox" name="text3" value="Отчет по кассирам. " />
             <label for="kt3">Отчет по кассирам</label><br>
             <input id="kt4" class="checkbox" type="checkbox" name="text4" value="Отчет Итоги проверок по магазинам" />
             <label for="kt4">Отчет Итоги проверок по магазинам</label><br>

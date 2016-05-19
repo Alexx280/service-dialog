@@ -28,7 +28,7 @@ $res = $link->query($q);
             <input id="kt2" class="checkbox" type="radio" name="text" value="Не снижается балл" />
             <label for="kt2">Не снижается балл</label><br>
             <input id="kt3" class="checkbox" type="radio" name="text" value="Это доп.информация для руководителя и сотрудника, о том, что сотрудник не всегда выполняет Сервисный диалог" />
-            <label for="kt3">Это доп.информация для руководителя и сотрудника, о том, что сотрудник не всегда выполняет Сервисный диалог</label><br>
+            <label for="kt3">Это дополнительная информация для руководителя и сотрудника, о том, что сотрудник не всегда выполняет Сервисный диалог</label><br>
             <input id="kt4" class="checkbox" type="radio" name="text" value="Не уверен(а) в ответе" />
             <label for="kt4">Не уверен(а) в ответе</label><br>
 
