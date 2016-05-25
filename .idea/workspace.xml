@@ -7,12 +7,7 @@
     <bookmark url="file://$PROJECT_DIR$/bootstrap/js/bootstrap.js" line="44" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3503b726-f9a0-4f71-84bc-f5dbe7ba6775" name="Default" comment="добавлено установка в БД кода для пользователя">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/funk.php" afterPath="$PROJECT_DIR$/funk.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new_string_for_many.php" afterPath="$PROJECT_DIR$/new_string_for_many.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/otchet.php" afterPath="$PROJECT_DIR$/otchet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="3503b726-f9a0-4f71-84bc-f5dbe7ba6775" name="Default" comment="добавлено установка в БД кода для пользователя" />
     <ignored path="Lama.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -371,7 +366,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="X:/Service-dialog_IE" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
