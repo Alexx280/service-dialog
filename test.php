@@ -27,7 +27,7 @@ $row = $res->fetch_assoc();
 </head>
 <body>
 
-            <div id='centr' >
+            <div id='centr' style="margin-left: -140px; width:280px;">
                 <form method="post" action="inter.php">
                     Фамилия:<br>
                     <input type="text" id="fa" name="family" size="30" required="required"

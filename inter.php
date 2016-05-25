@@ -30,7 +30,7 @@ if (isset($_SESSION['id_motiv'])) {
     $res = $link->query($income);
 
     echo('
-            <div id="centr" style="margin-left: -360px; width:700px">
+            <div id="centr" >
                 <p class="tc"> Добрый день, ' . $_POST['name'] . '  ' . $_POST['father_name'] . ' .<br>
                 Предлагаем вам ответить на 18 вопросов.<br>
                 Внимательно прочитайте вопросы и ответы.<br>
@@ -47,7 +47,7 @@ if (isset($_SESSION['id_motiv'])) {
 else {
     echo('
 
-            <div id="centr" style="margin-left: -360px; width:700px">
+            <div id="centr" >
                 <p class="tc"> Вы ввели не корректную информацию </br></br></p>
                 <form method="post" action="test.php">
                     <input type="submit" value="Ещё раз" class="table-form"/>
